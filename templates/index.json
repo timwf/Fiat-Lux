@@ -1,35 +1,28 @@
 {
   "sections": {
-    "1626249076cb5ff21f": {
-      "type": "custom-section",
-      "disabled": true,
+    "1626252590bd81a566": {
+      "type": "featured-products",
       "blocks": {
-        "1626249076cb5ff21f-0": {
-          "type": "title",
+        "1626252590bd81a566-0": {
+          "type": "product",
           "settings": {
-            "show_date": true,
-            "show_author": false
+            "product": "bitter-smoke"
           }
         },
-        "1626249076cb5ff21f-1": {
-          "type": "summary",
+        "bb4d0ef1-32ef-4819-adee-6025366e2d4b": {
+          "type": "product",
           "settings": {
-          }
-        },
-        "1626249076cb5ff21f-2": {
-          "type": "link",
-          "settings": {
+            "product": "bitter-smoke"
           }
         }
       },
       "block_order": [
-        "1626249076cb5ff21f-0",
-        "1626249076cb5ff21f-1",
-        "1626249076cb5ff21f-2"
+        "1626252590bd81a566-0",
+        "bb4d0ef1-32ef-4819-adee-6025366e2d4b"
       ],
       "settings": {
         "heading": "Blog posts",
-        "blog": "news",
+        "blog": "",
         "post_limit": 3,
         "show_view_all": true,
         "show_image": true,
@@ -38,6 +31,6 @@
     }
   },
   "order": [
-    "1626249076cb5ff21f"
+    "1626252590bd81a566"
   ]
 }
