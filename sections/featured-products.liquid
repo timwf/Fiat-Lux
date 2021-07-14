@@ -7,7 +7,16 @@
 <noscript>{{ 'component-card.css' | asset_url | stylesheet_tag }}</noscript>
 <noscript>{{ 'component-article-card.css' | asset_url | stylesheet_tag }}</noscript>
 
-{{ 'section-featured-blog.css' | asset_url | stylesheet_tag }}
+{{ 'section-featured-product.css' | asset_url | stylesheet_tag }}
+
+<section class="featured-products container">
+  <h1>testing 123456</h1>
+
+  <div class="featured-products__inner"></div>
+</section>
+
+
+
 
 <div class="blog{% if section.settings.soft_background %} background-secondary{% endif %}{% if section.settings.heading == blank %} no-heading{% endif %}">
   <div class="page-width-desktop">
@@ -94,7 +103,7 @@
       "type": "range",
       "id": "post_limit",
       "min": 1,
-      "max": 3,
+      "max": 6,
       "step": 1,
       "default": 3,
       "label": "t:sections.featured-blog.settings.post_limit.label"
@@ -121,50 +130,24 @@
   ],
   "blocks": [
     {
-      "type": "title",
-      "name": "t:sections.featured-blog.blocks.title.name",
-      "limit": 1,
+      "type": "product",
+      "name": "Product",
+      "limit": 6,
       "settings": [
         {
-          "type": "checkbox",
-          "id": "show_date",
-          "default": true,
-          "label": "t:sections.featured-blog.blocks.title.settings.show_date.label"
-        },
-        {
-          "type": "checkbox",
-          "id": "show_author",
-          "default": false,
-          "label": "t:sections.featured-blog.blocks.title.settings.show_author.label"
+          "type": "product",
+          "id": "product",
+          "label": "Add a Product"
         }
       ]
-    },
-    {
-      "type": "summary",
-      "name": "t:sections.featured-blog.blocks.summary.name",
-      "limit": 1
-    },
-    {
-      "type": "link",
-      "name": "t:sections.featured-blog.blocks.link.name",
-      "limit": 1
     }
   ],
   "presets": [
     {
       "name": "Featured Products",
-      "settings": {
-        "blog": "News"
-      },
       "blocks": [
         {
-          "type": "title"
-        },
-        {
-          "type": "summary"
-        },
-        {
-          "type": "link"
+          "type": "product"
         }
       ]
     }
