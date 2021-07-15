@@ -6,27 +6,28 @@
         "1626252590bd81a566-0": {
           "type": "product",
           "settings": {
-            "product": "bitter-smoke"
+            "product": "black-glade"
           }
         },
         "bb4d0ef1-32ef-4819-adee-6025366e2d4b": {
           "type": "product",
           "settings": {
-            "product": "bitter-smoke"
+            "product": "dawn-snowflake"
+          }
+        },
+        "2732c14e-4cb5-445e-ba21-51c657b41203": {
+          "type": "product",
+          "settings": {
+            "product": "delicate-voice"
           }
         }
       },
       "block_order": [
         "1626252590bd81a566-0",
-        "bb4d0ef1-32ef-4819-adee-6025366e2d4b"
+        "bb4d0ef1-32ef-4819-adee-6025366e2d4b",
+        "2732c14e-4cb5-445e-ba21-51c657b41203"
       ],
       "settings": {
-        "heading": "Blog posts",
-        "blog": "",
-        "post_limit": 3,
-        "show_view_all": true,
-        "show_image": true,
-        "soft_background": false
       }
     }
   },
