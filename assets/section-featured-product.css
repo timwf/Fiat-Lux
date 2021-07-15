@@ -1,0 +1,31 @@
+
+
+.featured-products__inner{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  margin-top: 50px;
+}
+
+.featured-products__item-image .vertical-line:last-child{
+  right: 0;
+  left: auto;
+} 
+
+.featured-products__item-image .horizontal-line:last-child{
+  top: 0;
+  bottom: auto;
+} 
+
+.featured-products__item-image{
+  position: relative;
+  padding-top: 100%;
+}
+
+.featured-products__item-image img{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0.2;
+}

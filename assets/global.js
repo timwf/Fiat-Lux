@@ -434,3 +434,24 @@ class DeferredMedia extends HTMLElement {
 }
 
 customElements.define('deferred-media', DeferredMedia);
+
+
+
+
+const generalArrow = document.getElementsByClassName('animated-svg')
+
+
+
+  for (var i = generalArrow.length - 1; i >= 0; i--) {
+    let speed = 100;
+    console.log('test');
+
+
+    new Vivus(generalArrow[i], {
+      type: 'oneByOne',
+      duration: speed
+    });
+  } 
+
+
+

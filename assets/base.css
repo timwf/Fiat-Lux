@@ -1,6 +1,6 @@
 :root{
   --max-width: 1400px;
-
+  --light-blue: #458EEA;
 }
 
 /* Color custom properties
@@ -148,4 +148,23 @@
   padding-right: 20px; /* 3 */
   width: 100%; /* 1 */
   max-width: var(--max-width);
+}
+
+.horizontal-line{
+  width: 100%;
+  position: absolute;
+  left: 0px;
+  bottom: 0px;
+}
+
+.vertical-line{
+  height: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.horizontal-line path, .vertical-line path{
+  stroke: var(--light-blue);
+
 }
