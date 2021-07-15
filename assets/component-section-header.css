@@ -1,0 +1,10 @@
+.section-header{
+  position: relative;
+  margin-bottom: 32px;
+  padding-bottom: 0px;
+}
+
+.section-header h2{
+
+  padding-bottom: 5px;
+}

@@ -3,6 +3,11 @@
   --light-blue: #458EEA;
 }
 
+html {
+  box-sizing: border-box;
+  -webkit-overflow-scrolling: touch;
+}
+
 /* Color custom properties
 
 
@@ -137,15 +142,19 @@
 /* base */
 
 
-#shopify-section-header{
+#shopify-section-header, #shopify-section-announcement-bar, .skip-to-content-link{
   display: none;
+}
+
+body{
+  color: var(--light-blue)
 }
 
 .container{
   margin-left: auto; /* 2 */
   margin-right: auto; /* 2 */
-  padding-left: 20px; /* 3 */
-  padding-right: 20px; /* 3 */
+  padding-left: 40px; /* 3 */
+  padding-right: 40px; /* 3 */
   width: 100%; /* 1 */
   max-width: var(--max-width);
 }
@@ -166,5 +175,4 @@
 
 .horizontal-line path, .vertical-line path{
   stroke: var(--light-blue);
-
 }

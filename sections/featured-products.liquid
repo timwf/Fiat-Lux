@@ -1,21 +1,10 @@
-<link rel="stylesheet" href="{{ 'component-slider.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-card.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-article-card.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'section-featured-blog.css' | asset_url }}" media="print" onload="this.media='all'">
-
-<noscript>{{ 'component-slider.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-card.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-article-card.css' | asset_url | stylesheet_tag }}</noscript>
-
+<link rel="stylesheet" href="{{ 'section-featured-product.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'section-featured-product.css' | asset_url | stylesheet_tag }}</noscript>
 {{ 'section-featured-product.css' | asset_url | stylesheet_tag }}
 
-<section style="margin-top: 500px;"  class="featured-products container">
-  <h2>FEATURED PRODUCTS</h2>
-  {% render 'horizontal-line' %}
-
+<section class="featured-products container">
+  {% render 'component-section-header' title: "FEATURED PRODUCTS"%}
   <div class="featured-products__inner">
-    
-
     {% for block in section.blocks %}
     {% assign product = all_products[block.settings.product] %}
       <div class="featured-products__item">
@@ -24,26 +13,18 @@
           {% render 'vertical-line' %}
           <img class="js-product-second-image" src="{{ product.media[0] | img_url: '400x400'}}" alt="">
           {% render 'horizontal-line' %}
-          {% render 'vertical-line' %}
-        
+          {% render 'vertical-line' %}        
         </div>
         <div class="featured-products__item-details">
+          {% render 'horizontal-line' %}
+          {% render 'vertical-line' %}    
           <h1>{{product.title}}</h1>
+          {% render 'horizontal-line' %}
         </div>
-
-
-
       </div>
-
     {% endfor %}
-
-
-
   </div>
 </section>
-
-
-
 
 {% schema %}
 {

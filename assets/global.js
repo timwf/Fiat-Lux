@@ -443,12 +443,13 @@ const generalArrow = document.getElementsByClassName('animated-svg')
 
 
   for (var i = generalArrow.length - 1; i >= 0; i--) {
-    let speed = 100;
-    console.log('test');
+    let speed = generalArrow[i].dataset.speed;
+    console.log(generalArrow[i].dataset.speed);
+ 
 
 
     new Vivus(generalArrow[i], {
-      type: 'oneByOne',
+      type: 'sync',
       duration: speed
     });
   } 

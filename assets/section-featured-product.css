@@ -12,9 +12,9 @@
   left: auto;
 } 
 
-.featured-products__item-image .horizontal-line:last-child{
-  top: 0;
-  bottom: auto;
+.featured-products__item-image .horizontal-line:first-child{
+
+  bottom: 100%;
 } 
 
 .featured-products__item-image{
@@ -26,6 +26,6 @@
   position: absolute;
   top: 0;
   height: 100%;
-  width: 100%;
-  opacity: 0.2;
+  width: calc(100% - 1px);
+  left: 1px;
 }
