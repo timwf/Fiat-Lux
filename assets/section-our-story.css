@@ -1,0 +1,40 @@
+.our-story__inner{
+  display: flex;
+  padding: 50px 116px;
+}
+
+.our-story__left{
+  width: 50%;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.our-story__left h3{
+  font-size: 50px;
+  position: relative;  
+}
+
+.our-story__left img{
+  width: 70%;
+  position: relative;
+  right: 0px;
+  bottom: 25px;
+}
+
+.our-story__image-wrap svg{
+  position: absolute;
+  bottom: -70px;
+  left: -80px;
+}
+
+
+.our-story__right{
+  width: 50%;
+}
+
+.our-story__right p{
+  margin-bottom: 25px;
+  color: black;
+}

@@ -5,6 +5,12 @@
 }
 
 .section-header h2{
-
+  margin-top: 54px;
   padding-bottom: 5px;
+}
+
+.section-header__snake-wrap{
+  position: absolute;
+  right: 48px;
+  top: -43px;
 }

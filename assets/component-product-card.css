@@ -1,0 +1,37 @@
+.product-card__item-image .vertical-line:last-child{
+  right: 0;
+  left: auto;
+} 
+
+.product-card__item-image .horizontal-line:first-child{
+  bottom: 100%;
+} 
+
+.product-card__item-image{
+  position: relative;
+  padding-top: 100%;
+}
+
+.product-card__item-image img{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: calc(100% - 1px);
+  left: 1px;
+}
+
+.product-card__item-details{
+  position: relative;
+  padding: 13px 17px;
+}
+
+
+.product-card__item-details{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.product-card__item-details p{
+  text-transform: capitalize;
+}

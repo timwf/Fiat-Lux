@@ -1,0 +1,20 @@
+<link rel="stylesheet" href="{{ 'component-product-card.css ' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'component-product-card.css' | asset_url | stylesheet_tag }}</noscript>
+{{ 'component-product-card.css' | asset_url | stylesheet_tag }}
+
+<div class="product-card__item">
+  <div class="product-card__item-image">
+    {% render 'horizontal-line' %}
+    {% render 'vertical-line' %}
+    <img class="js-product-second-image" src="{{ product.media[0] | img_url: '400x400'}}" alt="">
+    {% render 'horizontal-line' %}
+    {% render 'vertical-line' %}        
+  </div>
+  <div class="product-card__item-details">
+    {% render 'horizontal-line' %}
+    {% render 'vertical-line' %}    
+    <p>{{product.title}}</p>
+    <p>{{product.price | money}}</p>
+    {% render 'vertical-line' %}  
+  </div>
+</div>

@@ -2,26 +2,12 @@
 <noscript>{{ 'section-featured-product.css' | asset_url | stylesheet_tag }}</noscript>
 {{ 'section-featured-product.css' | asset_url | stylesheet_tag }}
 
-<section class="featured-products container">
+<section style="margin-top: 400px;" class="featured-products container">
   {% render 'component-section-header' title: "FEATURED PRODUCTS"%}
   <div class="featured-products__inner">
     {% for block in section.blocks %}
     {% assign product = all_products[block.settings.product] %}
-      <div class="featured-products__item">
-        <div class="featured-products__item-image">
-          {% render 'horizontal-line' %}
-          {% render 'vertical-line' %}
-          <img class="js-product-second-image" src="{{ product.media[0] | img_url: '400x400'}}" alt="">
-          {% render 'horizontal-line' %}
-          {% render 'vertical-line' %}        
-        </div>
-        <div class="featured-products__item-details">
-          {% render 'horizontal-line' %}
-          {% render 'vertical-line' %}    
-          <h1>{{product.title}}</h1>
-          {% render 'horizontal-line' %}
-        </div>
-      </div>
+      {% render 'component-product-card' product: product %}
     {% endfor %}
   </div>
 </section>

@@ -7,25 +7,3 @@
   margin-top: 50px;
 }
 
-.featured-products__item-image .vertical-line:last-child{
-  right: 0;
-  left: auto;
-} 
-
-.featured-products__item-image .horizontal-line:first-child{
-
-  bottom: 100%;
-} 
-
-.featured-products__item-image{
-  position: relative;
-  padding-top: 100%;
-}
-
-.featured-products__item-image img{
-  position: absolute;
-  top: 0;
-  height: 100%;
-  width: calc(100% - 1px);
-  left: 1px;
-}
