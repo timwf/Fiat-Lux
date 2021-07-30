@@ -1,5 +1,11 @@
 {
   "sections": {
+    "16276096099fac78c1": {
+      "type": "section-landing-page",
+      "settings": {
+        "heading": "You may also like"
+      }
+    },
     "1626252590bd81a566": {
       "type": "featured-products",
       "blocks": {
@@ -30,15 +36,61 @@
       "settings": {
       }
     },
-    "16276096099fac78c1": {
-      "type": "section-landing-page",
+    "162760971559972227": {
+      "type": "store-select",
       "settings": {
         "heading": "You may also like"
+      }
+    },
+    "1627609753806c7214": {
+      "type": "our-story",
+      "settings": {
+        "heading": "You may also like"
+      }
+    },
+    "1627609719bd99c0f6": {
+      "type": "featured-article",
+      "settings": {
+        "blog": ""
+      }
+    },
+    "1627609756853e67ad": {
+      "type": "featured-articles",
+      "blocks": {
+        "1627609756853e67ad-0": {
+          "type": "article",
+          "settings": {
+            "blog": ""
+          }
+        },
+        "e0d01080-8cab-45b7-95c2-01d02298dae6": {
+          "type": "article",
+          "settings": {
+            "blog": ""
+          }
+        },
+        "8488e2f6-99cd-4f31-8df0-0b4b80850db3": {
+          "type": "article",
+          "settings": {
+            "blog": ""
+          }
+        }
+      },
+      "block_order": [
+        "1627609756853e67ad-0",
+        "e0d01080-8cab-45b7-95c2-01d02298dae6",
+        "8488e2f6-99cd-4f31-8df0-0b4b80850db3"
+      ],
+      "settings": {
       }
     }
   },
   "order": [
+    "16276096099fac78c1",
     "1626252590bd81a566",
-    "16276096099fac78c1"
+    "162760971559972227",
+    "1627609753806c7214",
+    "1627609719bd99c0f6",
+    "1627609756853e67ad"
   ]
 }
