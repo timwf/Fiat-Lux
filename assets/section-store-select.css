@@ -44,8 +44,6 @@
 .store-select__body .store-select__body-item:last-of-type{
   width: 50%;
   margin: 18px 18px 18px 9px;
-
-
 }
 
 .store-select__body-item .horizontal-line:first-child{
@@ -65,5 +63,16 @@
   height: 100%;
   width: 100%;
   top: 0;
+}
+
+.store-select__body-item-wrap h3{
+  font-size: 43px;
+}
+
+.store-select__body-item-wrap p{
+  font-size: 16px;
+  text-align: center;
+  margin-top: 17px;
+  margin-bottom: 33px;
 }
 

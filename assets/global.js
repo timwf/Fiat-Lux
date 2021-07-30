@@ -437,22 +437,172 @@ customElements.define('deferred-media', DeferredMedia);
 
 
 
+  function initLinesAnimations(){
+    const generalArrow = document.getElementsByClassName('animated-svg')
+    for (var i = generalArrow.length - 1; i >= 0; i--) {
+      let speed = generalArrow[i].dataset.speed;
+      console.log(generalArrow[i].dataset.speed);
+   
+  
+  
+      new Vivus(generalArrow[i], {
+        type: 'sync',
+        duration: speed
+      });
+    } 
+  }
 
-const generalArrow = document.getElementsByClassName('animated-svg')
+
+  $(document).ready(() => {
+
+      //get viewheigth all devices
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+      window.addEventListener('resize', () => {
+        let vh = window.innerHeight * 0.01;
+        document.documentElement.style.setProperty('--vh', `${vh}px`);
+      });
 
 
 
-  for (var i = generalArrow.length - 1; i >= 0; i--) {
-    let speed = generalArrow[i].dataset.speed;
-    console.log(generalArrow[i].dataset.speed);
- 
+
+    function initHeader(){
+
+      $('.header__main-menu-item').each(function(){
+        let left = $(this).position()
+        console.log($(this).parent().find('.header__sub-nav').find('ul'));
+        $(this).parent().find('.header__sub-nav').find('ul').first().css('left', `${left.left }px`)
+      })
+
+      $('.header__main-menu-item').on('mouseenter', function(){
+        let left = $(this).position() 
+
+        $('.header__sub-nav').each(function(){
+          $(this).removeClass('active')
+        })
+
+        $(this).parent().find('.header__sub-nav').addClass('active')
+      })
 
 
-    new Vivus(generalArrow[i], {
-      type: 'sync',
-      duration: speed
-    });
-  } 
+
+      $('.header__main-menu-item').on('mouseleave', function(){
+        let self = this
+        let inSub = false;
+
+        $(this).parent().find('.header__sub-nav').on('mouseenter', function(){
+          inSub = true;
+        })
+
+        $(this).parent().find('.header__sub-nav').on('mouseleave', function(){
+          inSub = false;
+          $(self).parent().find('.header__sub-nav').removeClass('active')
+        })   
+
+        setTimeout(function(){ 
+          if(!inSub){
+            $(self).parent().find('.header__sub-nav').removeClass('active')
+          }
+
+          console.log($(this));
+
+         }, 1000);
+      })
+
+      var lastScrollTop = 0;
+      $(window).scroll(function(event){
+        var st = $(this).scrollTop();
+        let $header = $('.header')
+  
+        if ($('html').hasClass('disable-scrolling')) {
+          return;
+        }else{
+          if(st > 10){
+  
+            $('.header').removeClass('active')
+            
+          }
+
+    
+          if (st > lastScrollTop){
+     
+            $('.header').removeClass('active')
+            console.log('up?');
+    
+          } else {
+        
+            $('.header').addClass('active')
+          }
+          lastScrollTop = st;
+        }
+      });
+
+      //dark/light mode
+
+      $('.js-switch-theme').on('click', function(){
+        if($('body').hasClass('dark')){
+          $('body').removeClass('dark')
+          $(this).find('li').text('be Punk rock')
+        }else{
+          $('body').addClass('dark')
+          $(this).find('li').text('be Pinkies up')
+        }
+        initLinesAnimations()
+      })
+
+      //mobile menu
+      $('.icon-menu').on('click', function(){
+        $('.header__mobile').addClass('active')
+        $('.header__mobile').css('transition', '0.4s')
+
+      })
+
+      $('.icon-close').on('click', function(){
+
+        $('.header__mobile').removeClass('active')
+      })
+
+
+
+      
+      $('.header__mobile-has-subs').on('click', function(){
+
+        if ($(this).siblings().find('.header__mobile-submenu').hasClass('active')) {
+          $(this).siblings().find('.header__mobile-submenu').removeClass('active')
+
+          $(this).find('svg').removeClass('active')  
+          $(this).removeClass('active')
+        }else{
+          $('.header__mobile-submenu').each(function(){
+            $(this).removeClass('active')
+          })
+
+          $('.header__mobile-has-subs').each(function(){
+            $(this).removeClass('active')
+          })
+
+
+          
+          $('.header__mobile-has-subs').find('svg').each(function(){
+            $(this).removeClass('active')
+            
+          })
+          $(this).siblings().find('.header__mobile-submenu').addClass('active')
+          $(this).find('svg').addClass('active')  
+          $(this).addClass('active')
+        }   
+      })
+    }
+
+
+
+
+
+
+
+    initHeader()
+    initLinesAnimations()
+  })
 
 
 
