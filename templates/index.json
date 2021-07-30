@@ -29,9 +29,16 @@
       ],
       "settings": {
       }
+    },
+    "16276096099fac78c1": {
+      "type": "section-landing-page",
+      "settings": {
+        "heading": "You may also like"
+      }
     }
   },
   "order": [
-    "1626252590bd81a566"
+    "1626252590bd81a566",
+    "16276096099fac78c1"
   ]
 }
