@@ -60,19 +60,19 @@
         "1627609756853e67ad-0": {
           "type": "article",
           "settings": {
-            "blog": ""
+            "blog": "news\/blog-two"
           }
         },
         "e0d01080-8cab-45b7-95c2-01d02298dae6": {
           "type": "article",
           "settings": {
-            "blog": ""
+            "blog": "news\/blog-one"
           }
         },
         "8488e2f6-99cd-4f31-8df0-0b4b80850db3": {
           "type": "article",
           "settings": {
-            "blog": ""
+            "blog": "news\/blog-two"
           }
         }
       },
