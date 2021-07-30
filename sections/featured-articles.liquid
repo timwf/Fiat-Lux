@@ -1,0 +1,57 @@
+<link rel="stylesheet" href="{{ 'section-featured-blogs.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'section-featured-blogs.css' | asset_url | stylesheet_tag }}</noscript>
+{{ 'section-featured-blogs.css' | asset_url | stylesheet_tag }}
+
+<section  class="featured-blogs container">
+  {% render 'component-section-header' title: "FEATURED BLOGS", skull: "true"%}
+  <div class="featured-blogs__inner">
+
+    {% for block in section.blocks %}    
+      {% assign article = block.settings.blog %}
+      <div class="featured-blogs__item">
+
+        <img  src="{{article.image.src | img_url: 'master'}}" alt="">
+        <div class="featured-blogs__item-text">
+          <h3>{{ article.title }}</h3>
+
+          <p>{{ article.excerpt }}</p>
+          <h4>READ MORE</h4>
+        </div>
+
+      </div>
+
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Featured Articles",
+  "tag": "section",
+  "class": "spaced-section spaced-section--full-width",
+  "blocks": [
+    {
+      "type": "article",
+      "name": "article",
+      "limit": 6,
+      "settings": [
+        {
+          "type": "article",
+          "id": "blog",
+          "label": "Add an Article"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Featured Articles",
+      "blocks": [
+        {
+          "type": "article"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

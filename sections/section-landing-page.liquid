@@ -1,0 +1,87 @@
+
+
+
+<noscript>{{ 'section-landing-page.css' | asset_url | stylesheet_tag }}</noscript>
+
+
+{{ 'section-landing-page.css' | asset_url | stylesheet_tag }}
+
+<script src="{{ 'section-landing-page.js' | asset_url }}" defer="defer"></script>
+
+
+
+
+
+
+
+<section class="landing-page">
+  <div class="landing-page__logo">
+    {% render 'icon-logo-landing' %}      
+  </div>
+  <div class="landing-page__inner">
+    {% render 'horizontal-line' %}
+    {% render 'horizontal-line' %}
+    {% render 'vertical-line' %}   
+    {% render 'vertical-line' %} 
+    <div class="landing-page__top">
+      <h1>PICK YOUR POISON</h1>
+    </div>
+
+    <div class="landing-page__wrap">
+
+
+      <div class="landing-page__left">
+        <h2>PUNK ROCK</h2>
+        {% render 'big-snake' %} 
+        {% render 'vertical-line' %} 
+        {% render 'vertical-line' %} 
+        {% render 'vertical-line' %} 
+
+        {% render 'horizontal-line' %}
+        {% render 'horizontal-line' %}
+        {% render 'horizontal-line' %}
+        
+      </div>
+  
+      <div class="landing-page__right">
+        <h2>PINKIES UP</h2>
+        {% render 'big-moon' %} 
+      </div>
+    </div>
+
+    
+
+  </div>
+
+
+  <h1>langinfgg!!!</h1>
+</section>
+
+
+{% schema %}
+{
+  "name": "Landing Page",
+  "tag": "section",
+  "settings": [
+    {
+      "type": "paragraph",
+      "content": "t:sections.product-recommendations.settings.paragraph__1.content"
+    },
+    {
+      "type": "text",
+      "id": "heading",
+      "default": "You may also like",
+      "label": "t:sections.product-recommendations.settings.heading.label"
+    },
+    {
+      "type": "header",
+      "content": "t:sections.product-recommendations.settings.header__2.content"
+    }
+  ],
+  "presets": [
+    {
+      "name": "Landing Page"
+    }
+  ]
+}
+{% endschema %}

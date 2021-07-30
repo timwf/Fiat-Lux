@@ -1,14 +1,179 @@
-<link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
+<link rel="stylesheet" href="{{ 'section-header.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'section-header.css' | asset_url | stylesheet_tag }}</noscript>
 
-<noscript>{{ 'component-list-menu.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-search.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-menu-drawer.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-cart-notification.css' | asset_url | stylesheet_tag }}</noscript>
 
-<style>
+
+<header class="header active container">
+  <div class="header__left">
+    <div class="header__col header__col-one">
+      <div class="js-switch-theme">
+        <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect y="-1.41162" width="9.76404" height="9.76404" transform="matrix(0.708401 0.70581 -0.708401 0.70581 7.50001 3.08374)" stroke="#458EEA" stroke-width="2"/>
+        </svg>
+        <li>BE PUNK ROCK</li> 
+      </div> 
+    </div>
+    <div class="header__col header__col-two">
+      <ul>
+        {%- for link in  linklists.header-left.links -%}
+          <div class="">
+          <li class="header__main-menu-item {% if link.active %} header__main-menu-item-active{% endif %}">
+            <a href="{{ link.url }}" >
+              {{ link.title | escape }}
+            </a>
+          </li>
+          {% if link.links != blank %}
+            <div class="header__sub-nav">
+              <ul>
+                {%- for childlink in link.links -%}
+                  {%- if childlink.url != blank -%}
+                  <li>
+                    <a href="{{ childlink.url }}" >
+                      {{ childlink.title | escape }}
+                    </a>
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+              </ul>
+            </div>
+          {% endif %}
+        </div>
+        {%- endfor -%}
+      </ul>  
+    </div>  
+    {% render 'horizontal-line' %}
+  </div>
+  <div class="header__logo">
+    <img src="{{ section.settings.logo | img_url: 'master' }}" alt="logo">
+  </div>
+  <div class="header__right">
+    <div class="header__col header__col-three">      
+      <ul>
+        {%- for link in  linklists.header-right.links -%}
+          <div class="">
+          <li class="header__main-menu-item">
+            <a href="{{ link.url }}" >
+              {{ link.title | escape }}
+            </a>
+          </li>
+          {% if link.links != blank %}
+            <div class="header__sub-nav">
+              <ul>
+                {%- for childlink in link.links -%}
+                  {%- if childlink.url != blank -%}
+                  <li>
+                    <a href="{{ childlink.url }}" >
+                      {{ childlink.title | escape }}
+                    </a>
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+              </ul>
+            </div>
+          {% endif %}
+        </div>
+        {%- endfor -%}
+      </ul> 
+    </div>
+    <div class="header__col header__col-four">
+      {% render 'icon-account' %}
+      {% render 'icon-cart' %}
+      {% render 'icon-searchh' %}
+      {% render 'icon-menu' %}
+    </div>
+    {% render 'horizontal-line' %}
+  </div>
+
+  <div class="header__mobile">
+    <div class="header__mobile-top">
+      <div class="header__mobile-logo">
+        <img src="{{ section.settings.logo | img_url: 'master' }}" alt="logo">
+      </div>
+      <div class="header__mobile-icons">
+        {% render 'icon-cart' %}
+        {% render 'icon-close' %}
+      </div>
+       
+    </div>
+
+    <div class="header__mobile-body">
+
+      <div class="js-switch-theme">
+        <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <rect y="-1.41162" width="9.76404" height="9.76404" transform="matrix(0.708401 0.70581 -0.708401 0.70581 7.50001 3.08374)" stroke="#458EEA" stroke-width="2"/>
+        </svg>
+        <li>BE PUNK ROCK</li> 
+      </div>
+
+      <ul>
+        {%- for link in  linklists.header-left.links -%}
+          <div class="">
+          <li class=" {% if link.active %} {% endif %} {% if link.links != blank %}header__mobile-has-subs {% endif %}">
+            <a href="{{ link.url }}" >
+              {{ link.title | escape }}
+            </a>
+            {% if link.links != blank %}
+            {% render 'icon-drop-down' %}
+            {% endif %}
+          </li>
+          {% if link.links != blank %}     
+            <div class="">
+              <ul class="header__mobile-submenu">
+                {%- for childlink in link.links -%}
+                  {%- if childlink.url != blank -%}
+                  <li>
+                    <a href="{{ childlink.url }}" >
+                      {{ childlink.title | escape }}
+                    </a>
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+              </ul>
+            </div>
+          {% endif %}
+        </div>
+        {%- endfor -%}
+      </ul> 
+
+
+      <ul>
+        {%- for link in  linklists.header-right.links -%}
+          <div class="">
+          <li class=" {% if link.active %} {% endif %} {% if link.links != blank %}header__mobile-has-subs {% endif %}">
+            <a href="{{ link.url }}" >
+              {{ link.title | escape }}
+            </a>
+            {% if link.links != blank %}
+            {% render 'icon-drop-down' %}
+            {% endif %}
+          </li>
+          {% if link.links != blank %}     
+            <div class="">
+              <ul class="header__mobile-submenu">
+                {%- for childlink in link.links -%}
+                  {%- if childlink.url != blank -%}
+                  <li>
+                    <a href="{{ childlink.url }}" >
+                      {{ childlink.title | escape }}
+                    </a>
+                  </li>
+                {%- endif -%}
+              {%- endfor -%}
+              </ul>
+            </div>
+          {% endif %}
+        </div>
+        {%- endfor -%}
+      </ul> 
+    </div>
+  </div>
+
+</header>
+
+
+
+
+<!-- <style>
   header-drawer {
     justify-self: start;
     margin-left: -1.2rem;
@@ -62,6 +227,9 @@
 
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
+
+
+
 
 <svg xmlns="http://www.w3.org/2000/svg" class="hidden">
   <symbol id="icon-search" viewbox="0 0 18 19" fill="none">
@@ -540,7 +708,7 @@
   </script>
 {%- endif -%}
 
-<script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
+<script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script> -->
 
 {% schema %}
 {
@@ -550,55 +718,6 @@
       "type": "image_picker",
       "id": "logo",
       "label": "t:sections.header.settings.logo.label"
-    },
-    {
-      "type": "range",
-      "id": "logo_width",
-      "min": 50,
-      "max": 250,
-      "step": 10,
-      "default": 100,
-      "unit": "t:sections.header.settings.logo_width.unit",
-      "label": "t:sections.header.settings.logo_width.label"
-    },
-    {
-      "type": "select",
-      "id": "logo_position",
-      "options": [
-        {
-          "value": "middle-left",
-          "label": "t:sections.header.settings.logo_position.options__1.label"
-        },
-        {
-          "value": "top-left",
-          "label": "t:sections.header.settings.logo_position.options__2.label"
-        },
-        {
-          "value": "top-center",
-          "label": "t:sections.header.settings.logo_position.options__3.label"
-        }
-      ],
-      "default": "middle-left",
-      "label": "t:sections.header.settings.logo_position.label"
-    },
-    {
-      "type": "link_list",
-      "id": "menu",
-      "default": "main-menu",
-      "label": "t:sections.header.settings.menu.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "show_line_separator",
-      "default": true,
-      "label": "t:sections.header.settings.show_line_separator.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "enable_sticky_header",
-      "default": true,
-      "label": "t:sections.header.settings.enable_sticky_header.label",
-      "info": "t:sections.header.settings.enable_sticky_header.info"
     }
   ]
 }
