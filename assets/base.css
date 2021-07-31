@@ -13,6 +13,7 @@ html {
 .page-wrap{
   margin-top: 68px;
   overflow-x: hidden;
+  overflow-y: hidden;
 }
 
 @media (min-width: 1024px){
@@ -73,7 +74,7 @@ body{
   }
 }
 
-@media (min-width: 1440px){
+@media (min-width: 1660px){
   .container{
     padding-left: 70px; /* 3 */
     padding-right: 70px; /* 3 */
@@ -124,6 +125,12 @@ body{
 .button svg{
   margin-top: -2px;
   transition: 0.4s;
+  position: relative !important;
+  left: 0;
+  left: 0 !important;
+  right: 0;
+  bottom: 0 !important;
+  width: auto !important; 
 }
 
 .button:hover p{
@@ -167,6 +174,7 @@ a{
   line-height: 48px;
   letter-spacing: 0px;
   font-weight: 700;
+  text-transform: uppercase;
 }
 
 @media (min-width: 768px){ 
@@ -183,7 +191,7 @@ a{
   font-family:"kumlien-pro"; 
   font-size: 18px;
   line-height: 28px;
-  letter-spacing: 3px;
+  letter-spacing: 1px;
   font-weight: 700;
 }
 
@@ -210,6 +218,20 @@ a{
   }
 }
 
+.body-one{
+  font-family:"kumlien-pro"; 
+  font-size: 28px;
+  line-height: 34px;
+  letter-spacing: 0px;
+  font-weight: 400;
+}
+
+@media (min-width: 768px){ 
+  .body-one{
+    font-size: 56px;
+    line-height: 65px;
+  }
+}
 
 
 .body-three{
@@ -232,7 +254,7 @@ a{
   font-family:"astoria";
   font-size: 16px;
   line-height: 22px;
-  letter-spacing: 1px;
+  letter-spacing: 0.5px;
   font-weight: 400;
 }
 

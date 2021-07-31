@@ -1,6 +1,14 @@
+
+
 .store-select__top{
-  display: flex;
-  position: relative;
+  display: none;
+}
+
+@media (min-width: 768px){
+  .store-select__top{
+    display: flex;
+    position: relative;
+  }  
 }
 
 
@@ -22,8 +30,15 @@
 }
 
 .store-select__body{
-  display: flex;
-  position: relative;
+  display: none;
+}
+
+@media (min-width: 768px){
+  .store-select__body{
+    display: flex;
+    position: relative;
+  }
+  
 }
 
 .store-select__body .vertical-line:last-of-type{
@@ -31,15 +46,36 @@
   left: auto;
 } 
 
+.store-select__body-item-h-top{
+  top: 0;
+  bottom: auto;
+}
+
 
 
 .store-select__body-item{
   width: 50%;
   margin: 18px 9px 18px 18px;
-
   padding-top: calc(50% - 24px);
   position: relative;
 }
+
+.store-select__body-item img{
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  z-index: 9;
+  opacity: 0;
+  transition: 0.4s;
+}
+
+.store-select__body-item img:hover{
+  opacity: 1;
+  cursor: pointer;
+} 
+
 
 .store-select__body .store-select__body-item:last-of-type{
   width: 50%;
@@ -51,7 +87,7 @@
 } 
 
 .store-select__body-item p{
-  max-width: 200px;
+  max-width: 343px;
 }
 
 .store-select__body-item-wrap{
@@ -76,3 +112,80 @@
   margin-bottom: 33px;
 }
 
+
+
+
+@media (min-width: 768px){
+  .store-select__body-mobile{
+    display: none;
+  }  
+}
+
+
+.store-select__body-item-wrap-mobile{
+  position: relative;
+}
+
+.store-select__body-item-v-right{
+  right: 0;
+  left: auto;
+}
+
+.store-select__body-item-h-top-above{
+  position: relative;
+  height: 1px;
+  top: -23px;
+  bottom: auto;
+  bottom: 0;
+}
+
+.store-select__body-item-mobile-bottom-v-one{
+  height: 18vw;
+  position: relative;
+  left: 28vw;
+}
+
+.store-select__body-item-mobile-bottom-v-two{
+  height: 18vw;
+  position: relative;
+  left: 31vw;
+}
+
+.store-select__body-item-mobile-bottom-v-three{
+  height: 18vw;
+  position: relative;
+  left: 58vw;
+}
+
+.store-select__body-item-mobile-bottom-v-four{
+  height: 18vw;
+  position: relative;
+  left: 61vw;
+}
+
+.store-select__body-item-wrap-mobile__inner{
+  margin: 16px 20px;
+  position: relative;
+  top: -24px;
+  padding-top: 58px;
+  padding-bottom: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.store-select__body-item-wrap-mobile__inner p{
+  margin-top: 10px;
+  margin-bottom: 21px;
+
+}
+
+.store-select__body-item-wrap-mobile__inner-v-right{
+  right: 0;
+  left: auto;
+}
+
+.store-select__body-item-wrap-mobile__inner-h-top{
+  top: 0;
+}

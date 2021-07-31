@@ -15,3 +15,25 @@
   right: 48px;
   top: -43px;
 }
+
+.section-header .big-snake{
+  height: 84px;
+  width: 43px;
+  position: relative;
+  margin-top: 39px;
+  right: -28px;
+}
+
+@media (min-width: 768px){
+  .section-header .big-snake{
+    height: 145px;
+    width: 100px;
+    left: 20px;
+    margin-top: 10px;
+    right: 0;
+  }
+}
+
+.section-header .big-snake path{
+  stroke-width: 3px;
+}

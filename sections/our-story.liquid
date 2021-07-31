@@ -1,46 +1,44 @@
 <link rel="stylesheet" href="{{ 'section-our-story.css' | asset_url }}" media="print" onload="this.media='all'">
 
-<noscript>{{ 'section-our-story.css' | asset_url | stylesheet_tag }}</noscript>
-
-{{ 'section-our-story.css' | asset_url | stylesheet_tag }}
-
-
-
-
 <section  class="our-story container">
   {% render 'component-section-header' title: "OUR STORY" snake: "true"%}
   
   <div class="our-story__inner">
     <div class="our-story__left">
-      <h3>“Ut enim ad minim veniam, quis nostrud exercitation.”</h3>
+      <h3 class="body-one">“Ut enim ad minim veniam, quis nostrud exercitation.”</h3>
       <div class="our-story__image-wrap">
 
-        <svg class="animated-svg" data-speed="100" width="275" height="275" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M274 137.5C274 212.848 212.848 274 137.5 274C62.152 274 1 212.848 1 137.5C1 62.152 62.152 1 137.5 1C157.247 1 175.993 5.186 192.919 12.739C187.732 11.92 182.454 11.465 177.085 11.465C122.394 11.465 78.077 55.782 78.077 110.473C78.077 165.164 122.394 209.39 177.085 209.39C224.587 209.39 264.263 175.902 273.818 131.221C274 133.314 274 135.407 274 137.5Z" stroke="#E3BD5B" stroke-miterlimit="10"/>
-          <path d="M103.74 5.18457L83.3555 37.8536L105.651 41.9486" stroke="#E3BD5B" stroke-miterlimit="10"/>
-          <path d="M53.5966 29.7578L83.3536 37.8568L86.2656 71.0718L49.6836 74.2568L53.5966 29.7578Z" stroke="#E3BD5B" stroke-miterlimit="10"/>
-          <path d="M9.46094 90.1828L49.6829 74.2578L78.0749 110.476L40.5829 136.138L9.46094 90.1828Z" stroke="#E3BD5B" stroke-miterlimit="10"/>
-          <path d="M7.37109 178.903L40.5861 136.133L86.8141 150.966L67.9771 200.47L7.37109 178.903Z" stroke="#E3BD5B" stroke-miterlimit="10"/>
-          <path d="M62.8789 251.796L115.204 233.505V187.641L67.9749 200.472L62.8789 251.796Z" stroke="#E3BD5B" stroke-miterlimit="10"/>
-          <path d="M132.133 273.91L115.207 233.506L152.335 206.297L164.256 240.058L132.133 273.91Z" stroke="#E3BD5B" stroke-miterlimit="10"/>
-          <path d="M189.006 263.9L164.254 240.058L178.632 209.391L198.015 231.686L189.006 263.9Z" stroke="#E3BD5B" stroke-miterlimit="10"/>
-          <path d="M221.767 244.878L198.016 231.683L207.389 204.656L226.226 215.303L221.767 244.878Z" stroke="#E3BD5B" stroke-miterlimit="10"/>
-          <path d="M249.432 215.671L226.227 215.307L227.319 195.742" stroke="#E3BD5B" stroke-miterlimit="10"/>
-          <path d="M192.918 12.7371C192.918 12.7371 139.774 -4.00686 83.3543 37.8531C26.9343 79.7131 40.5843 136.133 40.5843 136.133C40.5843 136.133 43.2233 170.713 75.6193 209.388C108.015 248.063 174.354 238.963 174.354 238.963C174.354 238.963 214.849 233.958 242.422 200.47C269.995 166.982 273.908 131.219 273.908 131.219" stroke="#E3BD5B" stroke-miterlimit="10"/>
-          </svg>
-          
+        <div class="js-our-story-mob">
+          <svg class="animated-svg" data-speed="100" width="275" height="275" viewBox="0 0 275 275" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M274 137.5C274 212.848 212.848 274 137.5 274C62.152 274 1 212.848 1 137.5C1 62.152 62.152 1 137.5 1C157.247 1 175.993 5.186 192.919 12.739C187.732 11.92 182.454 11.465 177.085 11.465C122.394 11.465 78.077 55.782 78.077 110.473C78.077 165.164 122.394 209.39 177.085 209.39C224.587 209.39 264.263 175.902 273.818 131.221C274 133.314 274 135.407 274 137.5Z" stroke="#E3BD5B" stroke-miterlimit="10"/>
+            <path d="M103.74 5.18457L83.3555 37.8536L105.651 41.9486" stroke="#E3BD5B" stroke-miterlimit="10"/>
+            <path d="M53.5966 29.7578L83.3536 37.8568L86.2656 71.0718L49.6836 74.2568L53.5966 29.7578Z" stroke="#E3BD5B" stroke-miterlimit="10"/>
+            <path d="M9.46094 90.1828L49.6829 74.2578L78.0749 110.476L40.5829 136.138L9.46094 90.1828Z" stroke="#E3BD5B" stroke-miterlimit="10"/>
+            <path d="M7.37109 178.903L40.5861 136.133L86.8141 150.966L67.9771 200.47L7.37109 178.903Z" stroke="#E3BD5B" stroke-miterlimit="10"/>
+            <path d="M62.8789 251.796L115.204 233.505V187.641L67.9749 200.472L62.8789 251.796Z" stroke="#E3BD5B" stroke-miterlimit="10"/>
+            <path d="M132.133 273.91L115.207 233.506L152.335 206.297L164.256 240.058L132.133 273.91Z" stroke="#E3BD5B" stroke-miterlimit="10"/>
+            <path d="M189.006 263.9L164.254 240.058L178.632 209.391L198.015 231.686L189.006 263.9Z" stroke="#E3BD5B" stroke-miterlimit="10"/>
+            <path d="M221.767 244.878L198.016 231.683L207.389 204.656L226.226 215.303L221.767 244.878Z" stroke="#E3BD5B" stroke-miterlimit="10"/>
+            <path d="M249.432 215.671L226.227 215.307L227.319 195.742" stroke="#E3BD5B" stroke-miterlimit="10"/>
+            <path d="M192.918 12.7371C192.918 12.7371 139.774 -4.00686 83.3543 37.8531C26.9343 79.7131 40.5843 136.133 40.5843 136.133C40.5843 136.133 43.2233 170.713 75.6193 209.388C108.015 248.063 174.354 238.963 174.354 238.963C174.354 238.963 214.849 233.958 242.422 200.47C269.995 166.982 273.908 131.219 273.908 131.219" stroke="#E3BD5B" stroke-miterlimit="10"/>
+            </svg>
+            
+  
+  
+          <img src="{{ section.settings.image | img_url: 'master' }}" alt="">   
+        </div>
 
 
-        <img src="{{ section.settings.image | img_url: 'master' }}" alt="">   
       </div>
    
     </div>
     <div class="our-story__right">
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-      <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p class="body-four">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p class="body-four">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p class="body-four">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p class="body-four">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+      <p class="body-four">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+
     </div>
   </div>
 

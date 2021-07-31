@@ -1,11 +1,4 @@
 <link rel="stylesheet" href="{{ 'section-store-select.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'component-section-header.css ' | asset_url }}" media="print" onload="this.media='all'">
-
-<noscript>{{ 'section-store-select.css' | asset_url | stylesheet_tag }}</noscript>
-<noscript>{{ 'component-section-header.css' | asset_url | stylesheet_tag }}</noscript>
-
-{{ 'section-store-select.css' | asset_url | stylesheet_tag }}
-{{ 'component-section-header.css' | asset_url | stylesheet_tag }}
 
 
 
@@ -19,33 +12,107 @@
        </svg>
     </div>
   </div>
+
+
   <div class="store-select__body">
     {% render 'horizontal-line' %}
     {% render 'vertical-line' %}   
     {% render 'vertical-line' %}   
+
     <div class="store-select__body-item">
       <div class="store-select__body-item-wrap">
+        <img  src="{{ section.settings.m-image | img_url: 'master'}}" alt="">
         {% render 'horizontal-line' %}
-        {% render 'horizontal-line' %}
+        {% render 'horizontal-line', class: "store-select__body-item-h-top" %}
         {% render 'vertical-line' %}   
         {% render 'vertical-line' %}   
-        <h3>Misson</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua. </p>
-        <h4>enter</h4>
+        <h3 class="heading-two">{{ section.settings.m-heading }}</h3>
+        <p class="body-four">{{ section.settings.m-copy }} </p>
+        {% render 'button', bntLink: , text: "enter"  %} 
       </div>
     </div>
+
     <div class="store-select__body-item">
+      <img  src="{{ section.settings.f-image | img_url: 'master'}}" alt="">
       {% render 'horizontal-line' %}
-      {% render 'horizontal-line' %}
+      {% render 'horizontal-line', class: "store-select__body-item-h-top" %}
       {% render 'vertical-line' %}   
       {% render 'vertical-line' %}   
       <div class="store-select__body-item-wrap">
-        <h3>Misson</h3>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua. </p>
-        <p>enter</p>
-      <div class="store-select__body-item-wrap">
+        <h3 class="heading-two">{{ section.settings.f-heading }}</h3>
+        <p class="body-four">{{ section.settings.f-copy }} </p>
+        {% render 'button', bntLink: , text: "enter"  %} 
+      </div>
     </div>
+
   </div>
+
+
+
+
+  <div class="store-select__body-mobile">
+
+    <div class="store-select__body-item-mobile">
+      <div class="store-select__body-item-wrap-mobile">
+        {% render 'horizontal-line' %}
+        {% render 'horizontal-line', class: "store-select__body-item-h-top" %}
+        {% render 'vertical-line', class: "store-select__body-item-v-right" %}   
+        {% render 'vertical-line' %}   
+
+        
+
+        <svg class="animated-svg" data-speed="3000"  viewBox="0 0 792 146" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path d="M1 1L56 36M56 36V109M56 36L112.5 1L169 36M56 109L1 145M56 109L112.5 145L169 109M169 109L225 145L281 109M169 109V36M281 109L339 145L396.5 109M281 109V36.5M396.5 109L451 145L504.5 109M396.5 109V36.5M504.5 109L562 145L620 109M504.5 109V36.5M620 109L678 145L735.5 109M620 109V36.5M735.5 109L791 145M735.5 109V36.5M735.5 36.5L791 1M735.5 36.5L678 1L620 36.5M620 36.5L562 1L504.5 36.5M504.5 36.5L451 1L396.5 36.5M396.5 36.5L339 1L281 36.5M281 36.5L225 1L169 36" stroke="#458EEA"/>
+        </svg>   
+        {% render 'horizontal-line', class: "store-select__body-item-h-top-above" %}  
+
+        <div class="store-select__body-item-wrap-mobile__inner">
+          {% render 'vertical-line', class: "store-select__body-item-wrap-mobile__inner-v-right" %}
+          {% render 'horizontal-line', class: "store-select__body-item-wrap-mobile__inner-h-top" %}  
+          {% render 'vertical-line' %}
+          {% render 'horizontal-line' %}  
+          <h3 class="heading-two">{{ section.settings.m-heading }}</h3>
+          <p class="body-four">{{ section.settings.m-copy }} </p>
+          {% render 'button', bntLink: , text: "enter"  %} 
+        </div>
+      </div>
+    </div>
+
+    <div class="store-select__body-item-mobile" style="margin-top: 24px;">
+      <div class="store-select__body-item-wrap-mobile">
+        {% render 'horizontal-line' %}
+        {% render 'horizontal-line', class: "store-select__body-item-h-top" %}
+        {% render 'vertical-line', class: "store-select__body-item-v-right" %}   
+        {% render 'vertical-line' %}  
+
+        
+        {% render 'vertical-line', class: "store-select__body-item-mobile-bottom-v-one" %}   
+        {% render 'vertical-line', class: "store-select__body-item-mobile-bottom-v-two" %} 
+        {% render 'vertical-line', class: "store-select__body-item-mobile-bottom-v-three" %} 
+        {% render 'vertical-line', class: "store-select__body-item-mobile-bottom-v-four" %}
+        {% render 'horizontal-line', class: "store-select__body-item-h-top-above" %}  
+
+
+
+        <div class="store-select__body-item-wrap-mobile__inner">
+
+          {% render 'vertical-line', class: "store-select__body-item-wrap-mobile__inner-v-right" %}
+          {% render 'horizontal-line', class: "store-select__body-item-wrap-mobile__inner-h-top" %}  
+          {% render 'vertical-line' %}
+          {% render 'horizontal-line' %}  
+
+
+          <h3 class="heading-two">{{ section.settings.f-heading }}</h3>
+          <p class="body-four">{{ section.settings.f-copy }} </p>
+          {% render 'button', bntLink: , text: "enter"  %} 
+        </div>
+
+
+
+
+
+      </div>
+    </div>
 </section>
 
 {% schema %}
@@ -54,18 +121,38 @@
   "tag": "section",
   "settings": [
     {
-      "type": "paragraph",
-      "content": "t:sections.product-recommendations.settings.paragraph__1.content"
+      "type": "text",
+      "id": "m-heading",
+      "default": "Mission",
+      "label": "Mission Heading"
     },
     {
       "type": "text",
-      "id": "heading",
-      "default": "You may also like",
-      "label": "t:sections.product-recommendations.settings.heading.label"
+      "id": "m-copy",
+      "default": "Some copy here",
+      "label": "Mission Copy"
     },
     {
-      "type": "header",
-      "content": "t:sections.product-recommendations.settings.header__2.content"
+      "type": "image_picker",
+      "id": "m-image",
+      "label": "Mission Image"
+    },
+    {
+      "type": "text",
+      "id": "f-heading",
+      "default": "Fiilmore",
+      "label": "Fiilmore Heading"
+    },
+    {
+      "type": "text",
+      "id": "f-copy",
+      "default": "Some copy here",
+      "label": "FiilmoreCopy"
+    },
+    {
+      "type": "image_picker",
+      "id": "f-image",
+      "label": "Fiilmore Image"
     }
   ],
   "presets": [
