@@ -6,6 +6,28 @@
         "heading": "You may also like"
       }
     },
+    "16277125943c53e494": {
+      "type": "carousel",
+      "blocks": {
+        "f3eb9b4f-1494-4b0b-8824-613a861dc094": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/SF_MAG_5_1.png",
+            "pinkies-feat": false,
+            "pinkies-punk": false,
+            "heading": "Header  lorem ipsum dolor sit",
+            "copy": "Lorem ipsum dolor sit ametmollit anim elitadipiscing.",
+            "btn": "learn more",
+            "button_link": ""
+          }
+        }
+      },
+      "block_order": [
+        "f3eb9b4f-1494-4b0b-8824-613a861dc094"
+      ],
+      "settings": {
+      }
+    },
     "1626252590bd81a566": {
       "type": "featured-products",
       "blocks": {
@@ -38,12 +60,14 @@
     },
     "162760971559972227": {
       "type": "store-select",
+      "disabled": true,
       "settings": {
         "heading": "You may also like"
       }
     },
     "1627609753806c7214": {
       "type": "our-story",
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/SF_MAG_5_1.png",
         "heading": "You may also like"
@@ -51,12 +75,14 @@
     },
     "1627609719bd99c0f6": {
       "type": "featured-article",
+      "disabled": true,
       "settings": {
         "blog": "news\/blog-one"
       }
     },
     "1627609756853e67ad": {
       "type": "featured-articles",
+      "disabled": true,
       "blocks": {
         "1627609756853e67ad-0": {
           "type": "article",
@@ -88,6 +114,7 @@
   },
   "order": [
     "16276096099fac78c1",
+    "16277125943c53e494",
     "1626252590bd81a566",
     "162760971559972227",
     "1627609753806c7214",
