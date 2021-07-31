@@ -666,7 +666,7 @@ customElements.define('deferred-media', DeferredMedia);
 
       $('.js-switch-theme').on('click', function(){
         if($('body').hasClass('dark')){   
-          let pinkiesFeat = $('.pinkies-featured').first().attr('data-swiper-slide-index')        
+          let pinkiesFeat = $('.pinkies-featured').last().attr('data-swiper-slide-index')        
           swiper.slideTo(pinkiesFeat - 1, 1000)    
         }else{    
           let punkFeat = $('.pinkies-punk').first().attr('data-swiper-slide-index')        
@@ -681,12 +681,12 @@ customElements.define('deferred-media', DeferredMedia);
     
     
       right.on('click', function(){
-        let punkFeat = $('.pinkies-punk').first().attr('data-swiper-slide-index')        
+        let punkFeat = $('.pinkies-punk').last().attr('data-swiper-slide-index')        
         swiper.slideTo(punkFeat - 1, 1000)     
       })
     
       left.on('click', function(){
-        let pinkiesFeat = $('.pinkies-featured').first().attr('data-swiper-slide-index')        
+        let pinkiesFeat = $('.pinkies-featured').last().attr('data-swiper-slide-index')        
         swiper.slideTo(pinkiesFeat - 1, 1000)    
       })
     }
@@ -708,9 +708,11 @@ customElements.define('deferred-media', DeferredMedia);
     getWindowHeight()
 
     window.addEventListener('resize', () => {
-      getWindowHeight()
-      initOurStory()
-      initHeader()
+      // getWindowHeight()
+      // initOurStory()
+      // initHeader()
+      // initCarousel()
+      location.reload();
     });
   })
 

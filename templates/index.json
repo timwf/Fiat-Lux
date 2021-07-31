@@ -24,7 +24,7 @@
         "a25bd55e-c3e6-453e-aa31-110f52fb9e98": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/image.png",
+            "image": "shopify:\/\/shop_images\/joseph-andrews-1FG1BuSt7gI-unsplash_1.png",
             "pinkies-feat": true,
             "pinkies-punk": false,
             "heading": "Some Heading here",
@@ -36,7 +36,7 @@
         "82fed98c-fa8b-40f2-87cf-20cb4fcba5af": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/imageg.png",
+            "image": "shopify:\/\/shop_images\/Mask_Group.png",
             "pinkies-feat": false,
             "pinkies-punk": true,
             "heading": "Some Heading here",
@@ -86,17 +86,13 @@
     },
     "162760971559972227": {
       "type": "store-select",
+      "disabled": true,
       "settings": {
-        "m-heading": "Mission",
-        "m-copy": "Some copy here",
-        "m-image": "shopify:\/\/shop_images\/imageg.png",
-        "f-heading": "Fiilmore",
-        "f-copy": "Some copy here",
-        "f-image": "shopify:\/\/shop_images\/image.png"
       }
     },
     "1627609753806c7214": {
       "type": "our-story",
+      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/SF_MAG_5_1.png",
         "heading": "You may also like"

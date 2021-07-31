@@ -210,14 +210,22 @@
   margin-bottom: 4%; */
   margin-top: 21px;
   margin-bottom: 21px;
+  overflow: hidden;
 
 }
 
 .carousel__slide-left img{
   position: absolute;
-  width: 100%;
+  width: calc(100% - 1px);
   height: 100%;
   object-fit: cover;
+  transition: 3.5s;
+}
+
+.carousel__slide-left img:hover{
+  transform: scale(1.1) translateX(-38px);
+  
+  cursor: pointer;
 }
 
 

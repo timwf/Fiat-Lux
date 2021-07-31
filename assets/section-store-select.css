@@ -58,6 +58,7 @@
   margin: 18px 9px 18px 18px;
   padding-top: calc(50% - 24px);
   position: relative;
+  overflow: hidden;
 }
 
 .store-select__body-item img{
@@ -69,11 +70,13 @@
   z-index: 9;
   opacity: 0;
   transition: 0.4s;
+
 }
 
 .store-select__body-item img:hover{
   opacity: 1;
   cursor: pointer;
+  transform: scale(1.1);
 } 
 
 
