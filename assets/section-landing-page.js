@@ -28,25 +28,25 @@ $(document).ready(() => {
   const left = $('.landing-page__left')
   const right = $('.landing-page__right')
 
-
-
-
   right.on('click', function(){
-    console.log('right clicked');
-
+    $('.landing-page').addClass('remove')
     $('body').removeClass('dark')
-    $('.landing-page').fadeOut()
     initLinesAnimations()
-    enableScrolling()
+    
+    setTimeout(function(){ 
+
+      enableScrolling()
+    }, 1000);
   })
 
   left.on('click', function(){
-    console.log('right clicked');
-
+    $('.landing-page').addClass('remove')
     $('body').addClass('dark')
-    $('.landing-page').fadeOut()
     initLinesAnimations()
-    enableScrolling()
-  })
 
+    setTimeout(function(){ 
+
+      enableScrolling()
+     }, 1000);
+  })
 })

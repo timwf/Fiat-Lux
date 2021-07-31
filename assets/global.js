@@ -440,10 +440,7 @@ customElements.define('deferred-media', DeferredMedia);
   function initLinesAnimations(){
     const generalArrow = document.getElementsByClassName('animated-svg')
     for (var i = generalArrow.length - 1; i >= 0; i--) {
-      let speed = generalArrow[i].dataset.speed;
-      console.log(generalArrow[i].dataset.speed);
-   
-  
+      let speed = generalArrow[i].dataset.speed; 
   
       new Vivus(generalArrow[i], {
         type: 'sync',
@@ -542,11 +539,11 @@ customElements.define('deferred-media', DeferredMedia);
       $('.js-switch-theme').on('click', function(){
         if($('body').hasClass('dark')){
           $('body').removeClass('dark')
+
           $(this).find('li').text('be Punk rock')
         }else{
           $('body').addClass('dark')
-          $(this).find('li').text('be Pinkies up')
-        }
+          $(this).find('li').text('be Pinkies up')        }
         initLinesAnimations()
       })
 
@@ -594,14 +591,108 @@ customElements.define('deferred-media', DeferredMedia);
       })
     }
 
+    function initCarousel(){
 
 
 
+      const swiper = new Swiper('.carousel', {
+        slidesPerView: 1,
+        loop: true,
+        on: {
+          slideChangeTransitionStart: function (e) {
+            initLinesAnimations()
+            $('.slider-left').fadeOut()
+            $('.slider-right').fadeOut()
+          },
+          slideChangeTransitionEnd: function (e) {
+
+            $('.swiper-slide-active').find('.slider-left').show()
+            $('.swiper-slide-active').find('.slider-right').hide()
+            $('.swiper-slide-next').find('.slider-left').hide()
+            $('.swiper-slide-next').find('.slider-right').show()
+            },
+        },
+        pagination: {
+          el: '.carousel__swiper-pagination',
+          type: 'bullets',
+          clickable: "true",
+        },
+        breakpoints: {
+          1024: {
+            slidesPerView: 1.09,           
+          },
+
+          1400: {
+            slidesPerView: 1.08,           
+          },
+          1600: {
+            slidesPerView: 1.06,           
+          },
+
+        },
+
+        navigation: {
+          prevEl: '.carousel__slide-left-long-bar .slider-left',
+          nextEl: '.carousel__slide-left-long-bar .slider-right'
+        },
+      });
+
+
+      resizeElements()
+
+
+      function resizeElements(){
+        let latticeHeight = $('.carousel__slide-right-lattice').height()
+        let padding = $('.carousel__inner').outerHeight() - $('.carousel__inner').height()
+        let imageHeight = $('.carousel__slide-left-image-wrap img').offset().top
+        
+        
+        $('.carousel__slide-left-long-bar').css('top', `-${padding }px`)
+        $('.carousel__slide-right-inner').css('height', `calc(100% - ${latticeHeight + 40}px)`)
+        $('.carousel__slide-right-h-top').css('top', `${latticeHeight}px`)
+        $('.carousel__slide-left-long-bar-top').css('height', `${imageHeight - 53}px`)
+      }
+
+      
+
+
+      $( window ).resize(function() {
+        resizeElements()
+      });
+
+
+      $('.js-switch-theme').on('click', function(){
+        if($('body').hasClass('dark')){   
+          let pinkiesFeat = $('.pinkies-featured').first().attr('data-swiper-slide-index')        
+          swiper.slideTo(pinkiesFeat - 1, 1000)    
+        }else{    
+          let punkFeat = $('.pinkies-punk').first().attr('data-swiper-slide-index')        
+          swiper.slideTo(punkFeat - 1, 1000)          
+        }
+      })
+
+
+
+      const left = $('.landing-page__left')
+      const right = $('.landing-page__right')   
+    
+    
+      right.on('click', function(){
+        let punkFeat = $('.pinkies-punk').first().attr('data-swiper-slide-index')        
+        swiper.slideTo(punkFeat - 1, 1000)     
+      })
+    
+      left.on('click', function(){
+        let pinkiesFeat = $('.pinkies-featured').first().attr('data-swiper-slide-index')        
+        swiper.slideTo(pinkiesFeat - 1, 1000)    
+      })
+    }
 
 
 
     initHeader()
     initLinesAnimations()
+    initCarousel()
   })
 
 

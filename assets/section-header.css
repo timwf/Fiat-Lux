@@ -7,7 +7,7 @@
   z-index: 999;
   transition: 0.4s;
   border-bottom: solid var(--light-blue);
-  border-width: 1px;
+  border-width: 0.5px;
 }
 
 .js-switch-theme{
@@ -186,7 +186,7 @@
   top: -50px;
   border-top: none;
   border-bottom: solid var(--light-blue);
-  border-width: 1px;
+  border-width: 0.5px;
   padding: 20px 0px;
   left: 0px;
   background-color: white;

@@ -6,16 +6,27 @@
   z-index: 99999999;
   top: 0;
   color: white;
+  transition: 0.8s;
+}
+
+.landing-page.remove{
+transform: translateY(-100%);
 }
 
 .landing-page h2{
   font-family:"kumlien-pro";
-  font-size: 80px;
+  font-size: 60px;
   text-align: center;
   max-width: 300px;
   line-height: 80px;
   font-weight: 700;
   z-index: 9;
+}
+
+@media (min-width: 380px){
+  .landing-page h2{
+    font-size: 80px; 
+  }
 }
 
 @media (min-width: 1024px){
@@ -32,7 +43,7 @@
     font-size: 130px; 
     max-width: 500px;
     line-height: 130px;
-    margin-top: calc( var(--vh, 1vh) / 100 - 195px);
+    margin-top: calc( var(--vh, 1vh) / 100 - 136px);
   }
 }
 
@@ -46,6 +57,11 @@
 
 .landing-page__inner .horizontal-line:first-child{
   top: 0;
+}
+
+.landing-page__middle-one{
+  right: 0;
+  left: auto;
 }
 
 .landing-page__inner .vertical-line:last-child{
@@ -85,12 +101,20 @@
 .landing-page__top h1{
   font-family:"kumlien-pro";
   font-size: 18px;  z-index: 99999999999999;
+  transition: 0.4s;
 }
 
 @media (min-width: 1024px){
   .landing-page__top h1{
     font-size: 26px;
     margin-bottom: 20px;
+  }
+}
+
+@media (min-width: 1400px){
+  .landing-page__top h1{
+    font-size: 26px;
+    margin-bottom: 42px;
   }
 }
 
@@ -116,6 +140,14 @@
 
 .landing-page__left .horizontal-line:first{
   bottom: -55px; 
+}
+
+.landing-page__middle-mob-one{
+  bottom: 12px;
+}
+
+.landing-page__middle-mob-two{
+  bottom: 24px;
 }
 
 .landing-page__left .vertical-line{
@@ -156,6 +188,24 @@
   z-index: 99;
 }
 
+.landing-page__left:hover h2{
+  color: #725F2D;
+}
+
+.landing-page__right:hover h2{
+  color: #224775;
+}
+
+.landing-page__left:hover p{
+  opacity: 1;
+}
+
+.landing-page__right:hover p{
+  opacity: 1;
+}
+
+
+
 .landing-page__left:hover .big-snake{
   z-index: 99;
 }
@@ -192,14 +242,14 @@
 
 @media (min-width: 1440px){
   .landing-page__left .big-snake{
-    bottom: calc(var(--vh, 1vh) * 25 - 38px);
+    bottom: calc(var(--vh, 1vh) * 25 - 68px);
     max-height: none;
   }
 }
 
 .landing-page__right .big-moon{
   position: absolute;
-  height: 70vw;
+  height: 50vw;
   max-height: 250px;
 }
 
@@ -218,11 +268,35 @@
   }
 }
 
-
-.landing-page__left .vertical-line:first-child{
-  right: -20px;
+.landing-page__middle-two{
+  right: -10px !important;
 }
 
-.landing-page__left.vertical-line:first-child{
-  right: -10px;
+.landing-page__middle-three{
+  right: -20px !important;
 }
+
+
+.landing-page__store-name{
+  display: none;
+}
+
+@media (min-width: 1024px){
+  .landing-page__store-name{
+    display: block;
+    position: absolute;
+    bottom: 10px;
+    font-family:"kumlien-pro";
+    font-size: 22px;
+    font-weight: 700;
+    opacity: 0;
+    transition: 0.4s;
+  }
+}
+
+@media (min-width: 1440px){
+  .landing-page__store-name{
+    bottom: 63px;
+  }
+}
+

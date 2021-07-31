@@ -10,143 +10,18 @@ html {
   -webkit-overflow-scrolling: touch;
 }
 
-/* Color custom properties
-
-
-
-:root,
-.color-background-1 {
-  --color-foreground: var(--color-base-text);
-  --color-background: var(--color-base-background-1);
+.page-wrap{
+  margin-top: 68px;
+  overflow-x: hidden;
 }
 
-.color-background-2 {
-  --color-background: var(--color-base-background-2);
+@media (min-width: 1024px){
+  .page-wrap{
+    margin-top: 53px;
+  }
 }
 
-.color-inverse {
-  --color-foreground: var(--color-base-background-1);
-  --color-background: var(--color-base-text);
-}
 
-.color-accent-1 {
-  --color-foreground: var(--color-base-solid-button-labels);
-  --color-background: var(--color-base-accent-1);
-}
-
-.color-accent-2 {
-  --color-foreground: var(--color-base-solid-button-labels);
-  --color-background: var(--color-base-accent-2);
-}
-
-.color-foreground-outline-button {
-  --color-foreground: var(--color-base-outline-button-labels);
-}
-
-.color-foreground-accent-1 {
-  --color-foreground: var(--color-base-accent-1);
-}
-
-.color-foreground-accent-2 {
-  --color-foreground: var(--color-base-accent-2);
-}
-
-:root,
-.color-background-1 {
-  --color-link: var(--color-base-outline-button-labels);
-  --alpha-link: 0.85;
-}
-
-.color-background-2,
-.color-inverse,
-.color-accent-1,
-.color-accent-2 {
-  --color-link: var(--color-foreground);
-  --alpha-link: 0.7;
-}
-
-:root,
-.color-background-1 {
-  --color-button: var(--color-base-accent-1);
-  --color-button-text: var(--color-base-solid-button-labels);
-  --alpha-button-background: 1;
-  --alpha-button-border: 1;
-}
-
-.color-background-2,
-.color-inverse,
-.color-accent-1,
-.color-accent-2 {
-  --color-button: var(--color-foreground);
-  --color-button-text: var(--color-background);
-}
-
-.button--secondary {
-  --color-button: var(--color-base-outline-button-labels);
-  --color-button-text: var(--color-base-outline-button-labels);
-  --alpha-button-background: 0;
-}
-
-.color-background-2 .button--secondary,
-.color-inverse .button--secondary,
-.color-accent-1 .button--secondary,
-.color-accent-2 .button--secondary {
-  --color-button: var(--color-foreground);
-  --color-button-text: var(--color-foreground);
-}
-
-.button--tertiary {
-  --color-button: var(--color-base-outline-button-labels);
-  --color-button-text: var(--color-base-outline-button-labels);
-  --alpha-button-background: 0;
-  --alpha-button-border: 0.2;
-}
-
-.color-background-2 .button--tertiary,
-.color-inverse .button--tertiary,
-.color-accent-1 .button--tertiary,
-.color-accent-2 .button--tertiary {
-  --color-button: var(--color-foreground);
-  --color-button-text: var(--color-foreground);
-}
-
-:root,
-.color-background-1 {
-  --color-badge-background: var(--color-background);
-  --color-badge-border: var(--color-foreground);
-  --alpha-badge-border: 0.1;
-}
-
-.color-background-2,
-.color-inverse,
-.color-accent-1,
-.color-accent-2 {
-  --color-badge-background: var(--color-background);
-  --color-badge-border: var(--color-background);
-  --alpha-badge-border: 1;
-}
-
-:root,
-.color-background-1,
-.color-background-2 {
-  --color-card-hover: var(--color-base-text);
-}
-
-.color-inverse {
-  --color-card-hover: var(--color-base-background-1);
-}
-
-.color-accent-1,
-.color-accent-2 {
-  --color-card-hover: var(--color-base-solid-button-labels);
-}
-
-/* base */
-
-
-/* #shopify-section-header, #shopify-section-announcement-bar, .skip-to-content-link{
-  display: none;
-} */
 
 html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -180,6 +55,7 @@ time, mark, audio, video {
 body{
   color: black;
   box-sizing: border-box;
+  overflow-x: hidden;
 }
 
 .container{
@@ -200,7 +76,7 @@ body{
 @media (min-width: 1440px){
   .container{
     padding-left: 70px; /* 3 */
-    padding-right: 7 0px; /* 3 */
+    padding-right: 70px; /* 3 */
   }
 }
 
@@ -220,7 +96,7 @@ body{
   top: 0;
 }
 
-.horizontal-line path, .vertical-line path, .scale path{
+.horizontal-line path, .vertical-line path, .scale path, .carousel__slide-right-lattice path{
   stroke: var(--light-blue);
   /* stroke-width: 1px; */
 }
@@ -230,8 +106,40 @@ body{
   /* stroke-width: 1px; */
 }
 
+.button{
+  display: flex;
+  align-items: center;
+}
+
+.button p{
+  margin: 0 !important;
+  padding: 0 !important;
+  margin-right: 4px !important;
+  text-transform: uppercase;
+  font-family:"astoria";
+  font-size: 14px;  
+  transition: 0.4s;
+}
+
+.button svg{
+  margin-top: -2px;
+  transition: 0.4s;
+}
+
+.button:hover p{
+  color: var(--gold);
+}
+
+.button:hover svg{
+  margin-top: -2px;
+  transform: translateX(5px);
+}
 
 
+a{
+  color: black;
+  text-decoration: none;
+}
 
 
 
@@ -250,6 +158,10 @@ body.dark .header__main-menu-item a{
   color: white;
 }
 
+body.dark a{
+  color: white;
+}
+
 body.dark .header__main-menu-item a:hover{
   color: var(--gold);
 }
@@ -265,7 +177,7 @@ body.dark .header__col .js-switch-theme svg rect, body.dark .header__col .js-swi
 
 body.dark .header__sub-nav{
   background-color: black;
-  border-color: white;
+  border-color: #ffffff87;
 
 }
 
@@ -277,7 +189,8 @@ body.dark .header__sub-nav a:hover{
   color: var(--gold);
 }
 
-body.dark .header, body.dark .header__mobile, body.dark .header__mobile-body{
+body.dark .header, body.dark .header__mobile, body.dark .header__mobile-body, 
+body.dark .carousel__slide-left-long-bar-top, body.dark .carousel__slide-left-long-bar-bottom{
   background-color: black;
 }
 
@@ -318,13 +231,18 @@ body.dark svg rect{
   color: white !important;  
 }
 
-body.dark .vertical-line path, body.dark .horizontal-line path, body.dark .scale path{
+body.dark .vertical-line path, body.dark .horizontal-line path, body.dark .scale path, body.dark .carousel__slide-right-lattice path{
   stroke: white;
   /* stroke-width: 1px; */
 }
 
 body.dark .section-header h2{
   color: white;
+}
+
+body.dark .slider-right path, body.dark .slider-left path{
+    fill: white;
+    stroke: white;
 }
 
 

@@ -1,0 +1,150 @@
+<link rel="stylesheet" href="{{ 'carousel.css' | asset_url }}" media="print" onload="this.media='all'">
+<noscript>{{ 'carousel.css' | asset_url | stylesheet_tag }}</noscript>
+{{ 'carousel' | asset_url | stylesheet_tag }}
+
+<section  class="carousel">  
+  <div class="carousel__inner swiper-wrapper">
+
+
+
+    {% for block in section.blocks %}
+       <div class="carousel__slide swiper-slide 
+       {% if block.settings.pinkies-feat %} pinkies-featured{% endif %}
+       {% if block.settings.pinkies-punk %} pinkies-punk{% endif %}         
+       ">
+        {% render 'horizontal-line', class: 'carousel__slide-h-top' %}  
+         <div class="carousel__slide-left">         
+          <div class="carousel__slide-left-long-bar">
+            {% render 'vertical-line', class: "carousel__slide-left-longbar-v-left"%} 
+            {% render 'vertical-line', class: "carousel__slide-left-longbar-v-right"%}
+
+            <div class="carousel__slide-left-long-bar-top">
+              {% render 'vertical-line', class: "carousel__slide-left-longbar-top-v-one"%}
+              {% render 'vertical-line', class: "carousel__slide-left-longbar-top-v-two"%}
+              {% render 'vertical-line', class: "carousel__slide-left-longbar-top-v-three"%}
+              {% render 'horizontal-line', class: "carousel__slide-left-longbar-top-h-top"%}
+            </div>
+            <div class="carousel__slide-left-long-bar-bottom">
+              {% render 'icon-slider-left' %}
+              {% render 'icon-slider-right' %}
+            </div>
+
+          </div>
+          {% render 'vertical-line', class: "carousel__slide-left-v-left"%} 
+          {% render 'vertical-line', class: "carousel__slide-left-v-right"%}
+            <div class="carousel__slide-left-top">
+              {% render 'horizontal-line', class: "carousel__slide-left-h-top" %} 
+            </div>
+            <div class="carousel__slide-left-image-wrap">
+              <img  src="{{ block.settings.image | img_url: 'master'}}" alt="">
+            </div>
+            <div class="carousel__slide-left-bottom">
+
+
+              <div class="carousel__slide-left-bottom__inner">
+                {% render 'vertical-line', class: "carousel__slide-left-bottom__inner-v-right"%}
+                {% render 'vertical-line', class: "carousel__slide-left-bottom__inner-v-left"%}
+                {% render 'horizontal-line', class: "carousel__slide-left-bottom__inner-v-top"%}
+                {% render 'horizontal-line', class: "carousel__slide-left-bottom__inner-v-bottom"%}     
+              </div>
+
+
+              {% render 'horizontal-line', class: "carousel__slide-left-h-bottom"%} 
+            </div>   
+         </div>
+         <div class="carousel__slide-right">  
+          {% render 'vertical-line', class: "carousel__slide-right-v-left"%} 
+          {% render 'vertical-line', class: "carousel__slide-right-v-right"%}
+          {% render 'horizontal-line', class: "carousel__slide-right-h-top"%}         
+            <svg class="carousel__slide-right-lattice animated-svg" data-speed="3000"  viewBox="0 0 792 146" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M1 1L56 36M56 36V109M56 36L112.5 1L169 36M56 109L1 145M56 109L112.5 145L169 109M169 109L225 145L281 109M169 109V36M281 109L339 145L396.5 109M281 109V36.5M396.5 109L451 145L504.5 109M396.5 109V36.5M504.5 109L562 145L620 109M504.5 109V36.5M620 109L678 145L735.5 109M620 109V36.5M735.5 109L791 145M735.5 109V36.5M735.5 36.5L791 1M735.5 36.5L678 1L620 36.5M620 36.5L562 1L504.5 36.5M504.5 36.5L451 1L396.5 36.5M396.5 36.5L339 1L281 36.5M281 36.5L225 1L169 36" stroke="#458EEA"/>
+            </svg>   
+            <div class="carousel__slide-right-inner">
+              <div class="carousel__slide-right-inner-top">
+                <img  src="{{ block.settings.image | img_url: 'master'}}" alt="">
+                {% render 'horizontal-line', class: "carousel__slide-right-inner-top-v-one"%}  
+                {% render 'horizontal-line', class: "carousel__slide-right-inner-top-v-two"%} 
+              </div>
+              <div class="carousel__slide-right-inner-bottom">
+                <h1>{{ block.settings.heading }}</h1>
+                <p>{{ block.settings.copy}}</p>
+                <div class="carousel__swiper-pagination"></div>
+                {% render 'button', bntLink: block.settings.button_link, text: block.settings.btn  %} 
+              </div>
+
+
+              {% render 'vertical-line', class: "carousel__slide-right-inner-v-left"%} 
+              {% render 'vertical-line', class: "carousel__slide-right-inner-v-right"%}
+              {% render 'horizontal-line', class: "carousel__slide-right-inner-h-top"%}  
+              {% render 'horizontal-line', class: "carousel__slide-right-inner-h-bottom"%} 
+            </div>
+         </div>
+         {% render 'horizontal-line', class: 'carousel__slide-h-bottom' %}  
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% schema %}
+{
+  "name": "Carousel",
+  "tag": "section",
+  "class": "spaced-section spaced-section--full-width",
+  "blocks": [
+  {
+    "type": "slide",
+    "name": "Slide",
+    "limit": 6,
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "image",
+        "label": "Add an image"
+      },
+      {
+        "type": "checkbox",
+        "id": "pinkies-feat",
+        "label": "Featured Pinkies Slide",
+        "info": "NOTE: the fist checked in these blocks will be used for the featured slide",
+        "default": false
+      },
+      {
+        "type": "checkbox",
+        "id": "pinkies-punk",
+        "label": "Featured Punk Rock Slide",
+        "info": "NOTE: the fist checked in these blocks will be used for the featured slide",
+        "default": false
+      },
+      {
+        "type": "text",
+        "id": "heading",
+        "label": "Heading",
+        "default": "Some Heading here"
+      },
+      {
+        "type": "text",
+        "id": "copy",
+        "label": "Copy",
+        "default": "Some Copy Here"
+      },
+      {
+        "type": "text",
+        "id": "btn",
+        "label": "Button Label",
+        "default": "Button"
+      },
+      {
+        "type": "url",
+        "id": "button_link",
+        "label": "Button link"
+      }
+    ]
+  }
+  ],
+  "presets": [
+    {
+      "name": "Carousel"
+    }
+  ]
+}
+{% endschema %}
