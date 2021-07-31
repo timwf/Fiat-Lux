@@ -143,6 +143,110 @@ a{
 
 
 
+/* typography */
+
+
+.heading-one{
+  font-family:"kumlien-pro"; 
+  font-size: 80px;
+  line-height: 80px;
+  letter-spacing: 0px;
+  font-weight: 700;
+}
+
+@media (min-width: 768px){ 
+  .heading-one{
+    font-size: 130px;
+    line-height: 130px;
+  }
+}
+
+.heading-two{
+  font-family:"kumlien-pro"; 
+  font-size: 42px;
+  line-height: 48px;
+  letter-spacing: 0px;
+  font-weight: 700;
+}
+
+@media (min-width: 768px){ 
+  .heading-two{
+    font-size: 43px;
+    line-height: 53px;
+  }
+}
+
+
+
+
+.heading-four{
+  font-family:"kumlien-pro"; 
+  font-size: 18px;
+  line-height: 28px;
+  letter-spacing: 3px;
+  font-weight: 700;
+}
+
+@media (min-width: 768px){ 
+  .heading-four{
+    font-size: 22px;
+    line-height: 28px;
+  }
+}
+
+
+.heading-five{
+  font-family:"astoria";
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+@media (min-width: 768px){ 
+  .heading-five{
+    font-size: 15px;
+    line-height: 27px;
+  }
+}
+
+
+
+.body-three{
+  font-family:"astoria";
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  text-transform: uppercase ;
+}
+
+@media (min-width: 768px){ 
+  .body-three{
+    font-size: 17px;
+    line-height: 21px;
+  }
+}
+
+.body-four{
+  font-family:"astoria";
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+@media (min-width: 768px){ 
+  .body-four{
+    font-size: 16px;
+    line-height: 22px;
+  }
+}
+
+
+
+
+
 /* dark mode */
 
 body.dark{

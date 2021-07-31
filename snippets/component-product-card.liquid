@@ -4,17 +4,17 @@
 
 <div class="product-card__item">
   <div class="product-card__item-image">
-    {% render 'horizontal-line' %}
-    {% render 'vertical-line' %}
+    {% render 'horizontal-line', class: "product-card__item-image-h-bottom"  %}
+    {% render 'vertical-line', class: "product-card__item-image-v-left" %}
     <img class="js-product-second-image" src="{{ product.media[0] | img_url: '400x400'}}" alt="">
-    {% render 'horizontal-line' %}
-    {% render 'vertical-line' %}        
+    {% render 'horizontal-line', class: "product-card__item-image-h-top"  %}
+    {% render 'vertical-line'%}        
   </div>
   <div class="product-card__item-details">
     {% render 'horizontal-line' %}
     {% render 'vertical-line' %}    
-    <p>{{product.title}}</p>
-    <p>{{product.price | money}}</p>
-    {% render 'vertical-line' %}  
+    <p class="heading-five">{{product.title}}</p>
+    <p class="body-three">{{product.price | money}}</p>
+    {% render 'vertical-line', class: "product-card__item-details-v-right" %}  
   </div>
 </div>

@@ -6,54 +6,6 @@
         "heading": "You may also like"
       }
     },
-    "16277086927e71d839": {
-      "type": "carousel",
-      "blocks": {
-        "ea9db8ef-b43a-4a80-bb9f-2f1e98089d90": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/Mask_Group.png",
-            "pinkies-feat": false,
-            "pinkies-punk": false,
-            "heading": "Header  lorem ipsum dolor sit",
-            "copy": "Lorem ipsum dolor sit ametmollit  anim elitadipiscing.",
-            "btn": "learn more",
-            "button_link": ""
-          }
-        },
-        "7833484e-297f-4e0c-bfbf-3ad4f01967f1": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/SF_MAG_5_1.png",
-            "pinkies-feat": true,
-            "pinkies-punk": false,
-            "heading": "Header  lorem ipsum dolor sit dolor sit",
-            "copy": "Lorem ipsum dolor sit ametmollit  anim elitadipiscing.",
-            "btn": "Another Button",
-            "button_link": ""
-          }
-        },
-        "43dfd10c-9cb5-4573-ae1b-9d8a906a8891": {
-          "type": "slide",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/joseph-andrews-1FG1BuSt7gI-unsplash_1.png",
-            "pinkies-feat": false,
-            "pinkies-punk": true,
-            "heading": "Some Heading here",
-            "copy": "Header lorem ipsum dolor sit",
-            "btn": "Button",
-            "button_link": ""
-          }
-        }
-      },
-      "block_order": [
-        "ea9db8ef-b43a-4a80-bb9f-2f1e98089d90",
-        "7833484e-297f-4e0c-bfbf-3ad4f01967f1",
-        "43dfd10c-9cb5-4573-ae1b-9d8a906a8891"
-      ],
-      "settings": {
-      }
-    },
     "1626252590bd81a566": {
       "type": "featured-products",
       "blocks": {
@@ -136,7 +88,6 @@
   },
   "order": [
     "16276096099fac78c1",
-    "16277086927e71d839",
     "1626252590bd81a566",
     "162760971559972227",
     "1627609753806c7214",
