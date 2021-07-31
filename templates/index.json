@@ -20,10 +20,36 @@
             "btn": "learn more",
             "button_link": ""
           }
+        },
+        "a25bd55e-c3e6-453e-aa31-110f52fb9e98": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/joseph-andrews-1FG1BuSt7gI-unsplash_1.png",
+            "pinkies-feat": true,
+            "pinkies-punk": false,
+            "heading": "Some Heading here",
+            "copy": "Some Copy Here",
+            "btn": "Button",
+            "button_link": ""
+          }
+        },
+        "82fed98c-fa8b-40f2-87cf-20cb4fcba5af": {
+          "type": "slide",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Mask_Group.png",
+            "pinkies-feat": false,
+            "pinkies-punk": true,
+            "heading": "Some Heading here",
+            "copy": "Some Copy Here",
+            "btn": "Button",
+            "button_link": ""
+          }
         }
       },
       "block_order": [
-        "f3eb9b4f-1494-4b0b-8824-613a861dc094"
+        "f3eb9b4f-1494-4b0b-8824-613a861dc094",
+        "a25bd55e-c3e6-453e-aa31-110f52fb9e98",
+        "82fed98c-fa8b-40f2-87cf-20cb4fcba5af"
       ],
       "settings": {
       }
