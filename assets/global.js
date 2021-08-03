@@ -608,9 +608,9 @@
           slideChangeTransitionStart: function (e) {
 
 
-            if($(window).width() > 1024){
+          
             initLinesAnimations()
-            }
+       
 
 
 
