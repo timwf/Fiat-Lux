@@ -438,6 +438,10 @@ customElements.define('deferred-media', DeferredMedia);
 
 
   function initLinesAnimations(){
+
+    console.log('lines drawn');
+
+
     const generalArrow = document.getElementsByClassName('animated-svg')
     for (var i = generalArrow.length - 1; i >= 0; i--) {
       let speed = generalArrow[i].dataset.speed; 
