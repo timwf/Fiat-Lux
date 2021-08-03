@@ -743,13 +743,25 @@
     initOurStory()
     getWindowHeight()
     initFeaturedArticles()
+    var windowWidth = $(window).width();
 
     window.addEventListener('resize', () => {
-      console.log('resize!!');
-       getWindowHeight()
-       initOurStory()
-       initHeader()
-       initCarousel()
+
+      if ($(window).width() != windowWidth) {
+
+        // Update the window width for next time
+        windowWidth = $(window).width();
+
+        console.log('resize!!');
+        getWindowHeight()
+        initOurStory()
+        initHeader()
+        initCarousel()
+
+    }
+
+
+
        //location.reload();
     });
   })
