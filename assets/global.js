@@ -745,6 +745,7 @@
     initFeaturedArticles()
 
     window.addEventListener('resize', () => {
+      console.log('resize!!');
        getWindowHeight()
        initOurStory()
        initHeader()
