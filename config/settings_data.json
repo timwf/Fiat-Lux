@@ -13,8 +13,7 @@
           "footer-0": {
             "type": "link_list",
             "settings": {
-              "heading": "Quick links",
-              "menu": "footer"
+              "heading": "Quick links"
             }
           }
         },
@@ -22,8 +21,7 @@
           "footer-0"
         ],
         "settings": {
-          "color_scheme": "background-1",
-          "newsletter_enable": true,
+          "image": "shopify:\/\/shop_images\/footer.png",
           "newsletter_heading": "Sign up to our emails",
           "show_social": false,
           "enable_country_selector": true,
