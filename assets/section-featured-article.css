@@ -18,6 +18,7 @@
   .featured-article__item{
     display: flex;
     flex-direction: row-reverse;
+    padding-bottom: 21px;
   }
 
   .featured-article__left{
@@ -47,6 +48,7 @@
 
   .featured-article__item-text p{
     margin-top: 0px;
+
   }
 
   

@@ -58,7 +58,7 @@
   }
   
   .featured-blogs__item-text .button{
-    display: none;
+    /* display: none; */
   }
   
   .featured-blogs__item-text p{
