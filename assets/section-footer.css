@@ -61,6 +61,7 @@
 .footer__top-divider-three-h, .footer__top-divider-two-h, .footer__top-divider-one-h{
   margin-left: -20px;
   width: calc(100% + 40px);
+  z-index: 9;
 }
 
 
