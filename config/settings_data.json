@@ -21,6 +21,7 @@
           "footer-0"
         ],
         "settings": {
+          "image": "shopify:\/\/shop_images\/footer.png",
           "newsletter_heading": "Sign up to our emails",
           "show_social": false,
           "enable_country_selector": true,
