@@ -548,16 +548,17 @@
         if($('body').hasClass('dark')){
           $('body').removeClass('dark')
           $('.header__mobile').removeClass('active')
-          $("html, body").animate({ scrollTop: 0 }, 00);
+          //$("html, body").animate({ scrollTop: 0 }, 00);
 
           $(this).find('li').text('be Punk rock')
         }else{
           $('body').addClass('dark')
           $(this).find('li').text('be Pinkies up')   
           $('.header__mobile').removeClass('active')  
-          $("html, body").animate({ scrollTop: 0 }, 00);   }
+         // $("html, body").animate({ scrollTop: 0 }, 00);   }
 
           initLinesAnimations()
+        }
       })
 
       //mobile menu
