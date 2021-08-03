@@ -437,24 +437,24 @@
 
 
 
-//   function initLinesAnimations(){
+  function initLinesAnimations(){
 
-//     console.log('lines drawn');
+    console.log('lines drawn');
 
 
-//     if($(window).width() > 1024){
-//       const generalArrow = document.getElementsByClassName('animated-svg')
-//       for (var i = generalArrow.length - 1; i >= 0; i--) {
-//         let speed = generalArrow[i].dataset.speed; 
+    if($(window).width() > 1024){
+      const generalArrow = document.getElementsByClassName('animated-svg')
+      for (var i = generalArrow.length - 1; i >= 0; i--) {
+        let speed = generalArrow[i].dataset.speed; 
     
-//         new Vivus(generalArrow[i], {
-//           type: 'sync',
-//           duration: speed
-//         });
-//       } 
-//     }
+        new Vivus(generalArrow[i], {
+          type: 'sync',
+          duration: speed
+        });
+      } 
+    }
 
-//   }
+  }
 
 
   $(document).ready(() => {
