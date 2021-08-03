@@ -470,7 +470,6 @@ customElements.define('deferred-media', DeferredMedia);
 
       $('.header__main-menu-item').each(function(){
         let left = $(this).position()
-        console.log($(this).parent().find('.header__sub-nav').find('ul'));
         $(this).parent().find('.header__sub-nav').find('ul').first().css('left', `${left.left }px`)
       })
 
@@ -504,7 +503,7 @@ customElements.define('deferred-media', DeferredMedia);
             $(self).parent().find('.header__sub-nav').removeClass('active')
           }
 
-          console.log($(this));
+      
 
          }, 1000);
       })
@@ -527,7 +526,7 @@ customElements.define('deferred-media', DeferredMedia);
           if (st > lastScrollTop){
      
             $('.header').removeClass('active')
-            console.log('up?');
+  
     
           } else {
         
@@ -693,8 +692,7 @@ customElements.define('deferred-media', DeferredMedia);
 
 
         cutOff.each(function(i){
-          console.log(i);
-
+   
           if(i == 1){
             $(this).append('<span class="js-our-story-read-more"><br><br>READ MORE +</span')
           }
