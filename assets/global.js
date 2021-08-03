@@ -744,7 +744,7 @@ customElements.define('deferred-media', DeferredMedia);
       // initOurStory()
       // initHeader()
       // initCarousel()
-      // location.reload();
+       location.reload();
     });
   })
 
