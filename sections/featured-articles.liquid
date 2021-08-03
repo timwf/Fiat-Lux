@@ -4,24 +4,27 @@
 
 <section  class="featured-blogs container">
   {% render 'component-section-header' title: "FEATURED BLOGS", skull: "true"%}
-  <div class="featured-blogs__inner">
+  <div class="featured-blogs__inner swiper-wrapper">
 
     {% for block in section.blocks %}    
       {% assign article = block.settings.blog %}
-      <div class="featured-blogs__item">
+      <div class="featured-blogs__item swiper-slide">
 
         <img  src="{{article.image.src | img_url: 'master'}}" alt="">
         <div class="featured-blogs__item-text">
-          <h3>{{ article.title }}</h3>
+          <h3 class="heading-three">{{ article.title }}</h3>
 
-          <p>{{ article.excerpt }}</p>
-          <h4>READ MORE</h4>
+          <p class="body-four">{{ article.excerpt }}</p>
+          {% render 'button', text: "learn more" %}  
         </div>
 
       </div>
 
     {% endfor %}
+
+  
   </div>
+  <div class="featured-blogs__swiper-pagination"></div>
 </section>
 
 {% schema %}

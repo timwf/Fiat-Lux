@@ -5,22 +5,21 @@
 <section  class="featured-article container">
   {% render 'component-section-header' title: "INSENTIVES"%}
   <div class="featured-article__inner">
+    {% assign article = section.settings.blog %}
+    <div class="featured-article__item">
 
-
-      {% assign article = section.settings.blog %}
-      <div class="featured-article__item">
-
+      <div class="featured-article__left">
         <img style="max-width: 100%;"  src="{{article.image.src | img_url: 'master'}}" alt="">
-        <div class="featured-article__item-text">
-          <h3>{{ article.title }}</h3>
-
-          <p>{{ article.excerpt }}</p>
-          <h4>READ MORE</h4>
-        </div>
-
       </div>
 
-
+      <div class="featured-article__item-text">
+        <p class="body-four">{{ article.excerpt }}</p>
+        <div class="featured-article__buttons">
+          {% render 'button', text: "learn more", bntLink: article.url %}
+          {% render 'button', text: section.settings.btn-text, bntLink: section.settings.button_link %}
+        </div>         
+      </div>
+    </div>
   </div>
 </section>
 
@@ -34,6 +33,17 @@
       "type": "article",
       "id": "blog",
       "label": "Add an Article"
+    },
+    {
+      "type": "text",
+      "id": "btn-text",
+      "label": "Second Button Label",
+      "default": "Button"
+    },
+    {
+      "type": "url",
+      "id": "button_link",
+      "label": "Second Button Link"
     }
   ],
   "presets": [

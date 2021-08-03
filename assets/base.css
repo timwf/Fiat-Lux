@@ -14,6 +14,10 @@ html {
   margin-top: 68px;
   overflow-x: hidden;
   overflow-y: hidden;
+  z-index: 20;
+  position: relative;
+  background-color: white;
+  transition: 0.4s;
 }
 
 @media (min-width: 1024px){
@@ -57,6 +61,29 @@ body{
   color: black;
   box-sizing: border-box;
   overflow-x: hidden;
+}
+
+li, ul{
+  list-style: none;
+}
+
+input::placeholder {
+  color: black;
+  background-color: white;
+  transition: 0.4s;
+}
+
+
+input{
+  width: 100%;
+  background-color: white;
+  border: none;
+  border-bottom: solid black;
+  border-width: 0.5px;
+  font-family:"astoria";
+  font-size: 16px;
+  padding-bottom: 7px;
+  transition: 0.4s;
 }
 
 .container{
@@ -186,6 +213,24 @@ a{
 
 
 
+.heading-three{
+  font-family:"kumlien-pro"; 
+  font-size: 20px;
+  line-height: 30px;
+  letter-spacing: 1px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+@media (min-width: 768px){ 
+  .heading-three {
+    font-size: 26px;
+    line-height: 40px;
+  }
+}
+
+
+
 
 .heading-four{
   font-family:"kumlien-pro"; 
@@ -233,6 +278,21 @@ a{
   }
 }
 
+.body-two{
+  font-family:"astoria";
+  font-size: 24px;
+  line-height: 32px;
+  letter-spacing: 0px;
+  font-weight: 400;
+}
+
+@media (min-width: 768px){ 
+  .body-two{
+    font-size: 32px;
+    line-height: 44px;
+  }
+}
+
 
 .body-three{
   font-family:"astoria";
@@ -271,10 +331,17 @@ a{
 
 /* dark mode */
 
-body.dark{
+body.dark {
   background-color: black;
   color: white;  
 }
+
+body.dark .page-wrap{
+  background-color: black;
+  transition: 0.4s;
+}
+
+
 
 body{
   transition: 0.4s;
@@ -370,5 +437,23 @@ body.dark .slider-right path, body.dark .slider-left path{
     fill: white;
     stroke: white;
 }
+
+body.dark .footer__top-right, body.dark .footer__top-left,  body.dark input, body.dark input::placeholder {
+  background-color: black;
+  color: white;
+  opacity: 1;
+  border-color: white;
+}
+
+body.dark .footer__top-right-social-links svg path{
+  fill: white
+}
+
+body.dark .footer__top-left h3, body.dark .footer__top-left p, body.dark .footer__top-right h4, body.dark .footer__top-right-social h5{
+  color: #E3BD5B;
+}
+
+
+
 
 

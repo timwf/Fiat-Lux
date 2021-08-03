@@ -1,6 +1,10 @@
-.carousel{
-  height: calc(100vh - 50px);
-  /* cursor: grab; */
+
+
+@media (min-width: 1024px){
+  .carousel{
+     height: calc(100vh - 50px); 
+
+  }
 }
 
 .carousel .swiper-wrapper{

@@ -1,7 +1,63 @@
+<link rel="stylesheet" href="{{ 'section-footer.css' | asset_url }}" media="print" onload="this.media='all'">
 
 
-<div class="footer" style="height: 500px;">
 
+<div class="footer" >
+  <div class="footer__top container">
+
+
+    <div class="footer__top-left">
+      <h3>ABOUT US</h3>
+      <p class="body-two">Lorem ipsum dolor sit amet mollit anim elit, consectetur adipiscing excepteur id sint. Nunc euismod ipsum vitae dolor pharetra. Nam sed eros non nibh vulputate blandit integer vitae.</p>
+      {% render 'horizontal-line', class: "footer__top-divider-one-h" %}
+      {% render 'horizontal-line', class: "footer__top-divider-two-h" %}
+      {% render 'horizontal-line', class: "footer__top-divider-three-h" %}
+
+      {% render 'vertical-line', class: "footer__top-divider-one-v" %}
+      {% render 'vertical-line', class: "footer__top-divider-two-v" %}
+      {% render 'vertical-line', class: "footer__top-divider-three-v" %}
+    
+    </div>
+
+
+
+    <div class="footer__top-right">
+      {% render 'horizontal-line', class: "footer__bottom-divider-one-h" %}
+      <h4>NEWSLETTER</h4>
+      <input type="text" placeholder="Your email">
+      {% render 'button', text: "SIGN UP" %}
+
+      <div class="footer__top-right-links-wrap">
+          <div class="footer__top-right-links">
+            <ul>  
+              <li>CARE</li>
+              <li>Shipping</li>
+              <li>Return</li>
+              <li>Contact us</li>
+              <li>Faq</li>
+              <li>Privacy Policy</li>
+            </ul>
+          </div>
+          <div class="footer__top-right-social">
+            <h5>FOLLOW US</h5>
+            <div class="footer__top-right-social-links">
+              {% render 'icon-instagram' %}
+              {% render 'icon-facebook' %}
+              {% render 'icon-twitter' %}
+            </div>
+          </div>
+      </div>
+    </div>
+
+  </div>
+  <div class="footer__bottom" style="background-image: url({{section.settings.image.src | img_url: 'master'}})">
+    <div class="footer__bottom-left" style="background-image: url({{section.settings.image.src | img_url: 'master'}})">
+
+    </div>
+    <div class="footer__bottom-right" style="background-image: url({{section.settings.image.src | img_url: 'master'}})">
+      
+    </div>
+  </div>
 </div>
 
 
@@ -19,13 +75,6 @@
           "default": "Quick links",
           "label": "t:sections.footer.blocks.link_list.settings.heading.label",
           "info": "t:sections.footer.blocks.link_list.settings.heading.info"
-        },
-        {
-          "type": "link_list",
-          "id": "menu",
-          "default": "footer",
-          "label": "t:sections.footer.blocks.link_list.settings.menu.label",
-          "info": "t:sections.footer.blocks.link_list.settings.menu.info"
         }
       ]
     },
@@ -91,43 +140,9 @@
   ],
   "settings": [
     {
-      "type": "select",
-      "id": "color_scheme",
-      "options": [
-        {
-          "value": "accent-1",
-          "label": "t:sections.footer.settings.color_scheme.options__1.label"
-        },
-        {
-          "value": "accent-2",
-          "label": "t:sections.footer.settings.color_scheme.options__2.label"
-        },
-        {
-          "value": "background-1",
-          "label": "t:sections.footer.settings.color_scheme.options__3.label"
-        },
-        {
-          "value": "background-2",
-          "label": "t:sections.footer.settings.color_scheme.options__4.label"
-        },
-        {
-          "value": "inverse",
-          "label": "t:sections.footer.settings.color_scheme.options__5.label"
-        }
-      ],
-      "default": "background-1",
-      "label": "t:sections.footer.settings.color_scheme.label"
-    },
-    {
-      "type": "header",
-      "content": "t:sections.footer.settings.header__1.content",
-      "info": "t:sections.footer.settings.header__1.info"
-    },
-    {
-      "type": "checkbox",
-      "id": "newsletter_enable",
-      "default": true,
-      "label": "t:sections.footer.settings.newsletter_enable.label"
+      "type": "image_picker",
+      "id": "image",
+      "label": "Image"
     },
     {
       "type": "text",

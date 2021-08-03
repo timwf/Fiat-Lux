@@ -11,7 +11,6 @@
 @media (min-width: 768px){
   .featured-products__inner{ 
     grid-template-columns: 1fr 1fr 1fr;
-
   }
 }
 

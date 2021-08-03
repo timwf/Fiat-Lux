@@ -1,0 +1,65 @@
+<link rel="stylesheet" href="{{ 'section-instagram.css' | asset_url }}" media="print" onload="this.media='all'">
+
+
+<section  class="instagram container">
+  {% render 'component-section-header' title: "INSTAGRAM"%}
+  <div class="instagram__inner">
+    
+    <div class="instagram__desktop-web">
+      {% include 'button' text: "read more" %}
+      <svg class="animated-svg" data-speed="200" width="101" height="194" viewBox="0 0 101 194" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M17.6644 119.375L71.3057 157.336L71.2422 157.336C56.8321 157.336 45.4055 169.588 46.5482 183.998L46.5482 184.189" stroke="#E3BD5B" stroke-miterlimit="10"/>
+        <path d="M8.26826 63.8933L46.5469 12.1568L43.6903 13.1725C27.9471 18.7588 10.4266 14.3152 -0.809426 2L-0.809425 58.1166L-0.936384 57.8627C13.6641 64.9725 23.694 79.9538 23.694 97.2839C23.694 114.614 13.6006 129.595 -0.999867 136.705L-0.809424 136.642L-0.809424 192.758C10.617 181.713 27.1219 177.904 42.2302 182.855L46.6104 184.252L8.33173 130.675" stroke="#E3BD5B" stroke-miterlimit="10"/>
+        <path d="M46.5482 12.1602C45.469 26.5703 56.8321 38.8221 71.2422 38.8221L71.3057 38.8221L17.7279 75.133" stroke="#E3BD5B" stroke-miterlimit="10"/>
+        <path d="M71.3039 157.339C67.6855 134.168 77.8424 110.998 97.331 97.9844L98.4736 97.2227L23.6933 97.2227" stroke="#E3BD5B" stroke-miterlimit="10"/>
+        <path d="M71.3039 38.8203L71.1769 39.6456C67.8124 62.5621 78.5407 85.2882 98.4736 97.2226" stroke="#E3BD5B" stroke-miterlimit="10"/>
+        <path d="M-0.811337 31.582L-0.303489 32.4073C4.58453 40.7867 14.2336 45.0399 23.6922 43.0086C23.6922 51.8959 30.929 59.1327 39.8163 59.1327L41.2129 59.1327L41.0225 60.4023C39.118 74.4315 44.7043 88.3973 55.8135 97.1576C44.7678 105.981 39.3085 120.138 41.6573 134.103L42.1016 136.643C33.4048 137.595 26.2949 144.07 24.6444 152.703L24.5175 153.402L22.4226 152.894C13.5988 150.735 4.3306 154.163 -0.87482 161.654" stroke="#E3BD5B" stroke-miterlimit="10"/>
+        </svg>
+    </div>
+    {% for block in section.blocks %}    
+
+      <div class="instagram__item">
+
+        <img  src="{{block.settings.image.src | img_url: 'master'}}" alt="">
+      </div>
+    {% endfor %}  
+
+        
+    <div class="instagram__mobile-button">
+      {% include 'button' text: "see all" %}
+    </div>
+  </div>
+  {% render 'horizontal-line', class: "" %}
+</section>
+
+{% schema %}
+{
+  "name": "Instagram",
+  "tag": "section",
+  "class": "spaced-section spaced-section--full-width",
+  "blocks": [
+    {
+      "type": "Image",
+      "name": "image",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Instagram",
+      "blocks": [
+        {
+          "type": "Image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

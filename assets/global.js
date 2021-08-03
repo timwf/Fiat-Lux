@@ -596,8 +596,6 @@ customElements.define('deferred-media', DeferredMedia);
 
     function initCarousel(){
 
-
-
       const swiper = new Swiper('.carousel', {
         slidesPerView: 1,
         loop: true,
@@ -657,13 +655,6 @@ customElements.define('deferred-media', DeferredMedia);
       }
 
       
-
-
-      $( window ).resize(function() {
-        resizeElements()
-      });
-
-
       $('.js-switch-theme').on('click', function(){
         if($('body').hasClass('dark')){   
           let pinkiesFeat = $('.pinkies-featured').last().attr('data-swiper-slide-index')        
@@ -674,10 +665,10 @@ customElements.define('deferred-media', DeferredMedia);
         }
       })
 
-
-
       const left = $('.landing-page__left')
       const right = $('.landing-page__right')   
+
+  
     
     
       right.on('click', function(){
@@ -696,7 +687,47 @@ customElements.define('deferred-media', DeferredMedia);
       if( $(window).width() < 1024 ){
         let image = $('.js-our-story-mob')
         $('.our-story__right p').first().append(image)
+
+        let cutOff = $('.our-story__right p')
+        let container = $('.our-story')
+
+
+        cutOff.each(function(i){
+          console.log(i);
+
+          if(i == 1){
+            $(this).append('<span class="js-our-story-read-more"><br><br>READ MORE +</span')
+          }
+
+          if(i < 2){
+            return;
+          }
+
+          $(this).hide()
+        })
+
+        $('.js-our-story-read-more').on('click', function(){
+          $('.js-our-story-read-more').fadeOut()
+          cutOff.fadeIn()
+        })
       }
+    }
+
+    function initFeaturedArticles(){
+      
+
+      if($(window).width() < 1025){
+        const swiper = new Swiper('.featured-blogs', {
+          slidesPerView: 1,
+          pagination: {
+            el: '.featured-blogs__swiper-pagination',
+            type: 'bullets',
+            clickable: "true",
+          },
+          spaceBetween: 20,
+        });
+      }
+
     }
 
 
@@ -706,13 +737,14 @@ customElements.define('deferred-media', DeferredMedia);
     initCarousel()
     initOurStory()
     getWindowHeight()
+    initFeaturedArticles()
 
     window.addEventListener('resize', () => {
       // getWindowHeight()
       // initOurStory()
       // initHeader()
       // initCarousel()
-      location.reload();
+      // location.reload();
     });
   })
 
