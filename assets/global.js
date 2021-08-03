@@ -442,7 +442,7 @@
     console.log('lines drawn');
 
 
-    if($(window).width() > 1024){
+
       const generalArrow = document.getElementsByClassName('animated-svg')
       for (var i = generalArrow.length - 1; i >= 0; i--) {
         let speed = generalArrow[i].dataset.speed; 
@@ -451,8 +451,7 @@
           type: 'sync',
           duration: speed
         });
-      } 
-    }
+      }     
 
   }
 
@@ -461,11 +460,11 @@
 
 
 
-      const getWindowHeight = function(){
-        //get viewheigth all devices
-        let vh = window.innerHeight * 0.01;
-        document.documentElement.style.setProperty('--vh', `${vh}px`);
-      }
+    const getWindowHeight = function(){
+      //get viewheigth all devices
+      let vh = window.innerHeight * 0.01;
+      document.documentElement.style.setProperty('--vh', `${vh}px`);
+    }
 
 
 
@@ -607,7 +606,14 @@
         loop: true,
         on: {
           slideChangeTransitionStart: function (e) {
+
+
+            if($(window).width() > 1024){
             initLinesAnimations()
+            }
+
+
+
             $('.slider-left').fadeOut()
             $('.slider-right').fadeOut()
           },
