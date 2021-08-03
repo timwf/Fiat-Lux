@@ -89,8 +89,10 @@
       "settings": {
         "m-heading": "Mission",
         "m-copy": "Some copy here",
+        "m-image": "shopify:\/\/shop_images\/imageg.png",
         "f-heading": "Fiilmore",
-        "f-copy": "Some copy here"
+        "f-copy": "Some copy here",
+        "f-image": "shopify:\/\/shop_images\/image.png"
       }
     },
     "1627609753806c7214": {
