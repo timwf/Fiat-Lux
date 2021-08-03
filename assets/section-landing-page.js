@@ -32,7 +32,7 @@ $(document).ready(() => {
     $('.landing-page').addClass('remove')
     $('body').removeClass('dark')
     initLinesAnimations()
-    
+    $('.header').addClass('active')
     setTimeout(function(){ 
 
       enableScrolling()
