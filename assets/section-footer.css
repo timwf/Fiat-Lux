@@ -144,6 +144,10 @@
   fill: black;
 }
 
+.footer__top-divider-one-v,  .footer__top-divider-two-v,  .footer__top-divider-three-v{
+  display: none;
+}
+
 
 @media (min-width: 1180px){
 
@@ -184,16 +188,19 @@
   .footer__top-divider-one-v{
     right: 0;
     left: auto;
+    display: block;
   }
 
   .footer__top-divider-two-v{
     right: 11px;
     left: auto;
+    display: block;
   }
 
   .footer__top-divider-three-v{
     right: 22px;
     left: auto;
+    display: block;
   }
 
   .footer__top-right{
