@@ -445,6 +445,17 @@ body.dark .footer__top-right, body.dark .footer__top-left,  body.dark input, bod
   border-color: white;
 }
 
+body.dark .footer__top{
+  background-color: black;
+}
+
+@media (min-width: 1180px){
+  body.dark .footer__top{
+    background-color: transparent;
+  }
+  
+}
+
 body.dark .footer__top-right-social-links svg path{
   fill: white
 }
