@@ -759,10 +759,11 @@
         windowWidth = $(window).width();
 
         console.log('resize!!');
-        getWindowHeight()
-        initOurStory()
-        initHeader()
-        initCarousel()
+        // getWindowHeight()
+        // initOurStory()
+        // initHeader()
+        // initCarousel()
+        location.reload();
 
     }
 
