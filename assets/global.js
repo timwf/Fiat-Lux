@@ -448,7 +448,7 @@
         let speed = generalArrow[i].dataset.speed; 
 
         if($(window).width() < 1024){
-          speed = speed * 3
+          speed = speed / 3
         }
     
         new Vivus(generalArrow[i], {
