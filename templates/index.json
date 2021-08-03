@@ -24,7 +24,7 @@
         "a25bd55e-c3e6-453e-aa31-110f52fb9e98": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/joseph-andrews-1FG1BuSt7gI-unsplash_1.png",
+            "image": "shopify:\/\/shop_images\/image.png",
             "pinkies-feat": true,
             "pinkies-punk": false,
             "heading": "Some Heading here",
@@ -36,7 +36,7 @@
         "82fed98c-fa8b-40f2-87cf-20cb4fcba5af": {
           "type": "slide",
           "settings": {
-            "image": "shopify:\/\/shop_images\/Mask_Group.png",
+            "image": "shopify:\/\/shop_images\/imageg.png",
             "pinkies-feat": false,
             "pinkies-punk": true,
             "heading": "Some Heading here",
@@ -86,13 +86,15 @@
     },
     "162760971559972227": {
       "type": "store-select",
-      "disabled": true,
       "settings": {
+        "m-heading": "Mission",
+        "m-copy": "Some copy here",
+        "f-heading": "Fiilmore",
+        "f-copy": "Some copy here"
       }
     },
     "1627609753806c7214": {
       "type": "our-story",
-      "disabled": true,
       "settings": {
         "image": "shopify:\/\/shop_images\/SF_MAG_5_1.png",
         "heading": "You may also like"
@@ -100,14 +102,14 @@
     },
     "1627609719bd99c0f6": {
       "type": "featured-article",
-      "disabled": true,
       "settings": {
-        "blog": "news\/blog-one"
+        "blog": "news\/blog-one",
+        "btn-text": "Button",
+        "button_link": ""
       }
     },
     "1627609756853e67ad": {
       "type": "featured-articles",
-      "disabled": true,
       "blocks": {
         "1627609756853e67ad-0": {
           "type": "article",
@@ -135,6 +137,36 @@
       ],
       "settings": {
       }
+    },
+    "162797718464830eb0": {
+      "type": "instagram",
+      "blocks": {
+        "162797718464830eb0-0": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Instagram_3.png"
+          }
+        },
+        "7b037dec-3209-4792-8c5c-be7511f560f3": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Instagram_2.png"
+          }
+        },
+        "68cdbfc4-cf7b-4bff-9f7b-34fc09173678": {
+          "type": "Image",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/Instagram_1.png"
+          }
+        }
+      },
+      "block_order": [
+        "162797718464830eb0-0",
+        "7b037dec-3209-4792-8c5c-be7511f560f3",
+        "68cdbfc4-cf7b-4bff-9f7b-34fc09173678"
+      ],
+      "settings": {
+      }
     }
   },
   "order": [
@@ -144,6 +176,7 @@
     "162760971559972227",
     "1627609753806c7214",
     "1627609719bd99c0f6",
-    "1627609756853e67ad"
+    "1627609756853e67ad",
+    "162797718464830eb0"
   ]
 }
