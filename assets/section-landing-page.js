@@ -42,7 +42,7 @@ $(document).ready(() => {
   left.on('click', function(){
     $('.landing-page').addClass('remove')
     $('body').addClass('dark')
-    initLinesAnimations()
+    $('.header').addClass('active')
 
     setTimeout(function(){ 
 
