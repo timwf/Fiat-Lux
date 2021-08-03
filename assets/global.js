@@ -738,11 +738,11 @@ customElements.define('deferred-media', DeferredMedia);
     initFeaturedArticles()
 
     window.addEventListener('resize', () => {
-      // getWindowHeight()
-      // initOurStory()
-      // initHeader()
-      // initCarousel()
-       location.reload();
+       getWindowHeight()
+       initOurStory()
+       initHeader()
+       initCarousel()
+       //location.reload();
     });
   })
 
