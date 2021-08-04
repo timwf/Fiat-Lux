@@ -468,18 +468,18 @@ $(document).ready(() => {
     function initLinesAnimations(){
       const generalArrow = document.getElementsByClassName('animated-svg')
     
-      // for (var i = generalArrow.length - 1; i >= 0; i--) {
-      //   let speed = generalArrow[i].dataset.speed;        
+      for (var i = generalArrow.length - 1; i >= 0; i--) {
+        let speed = generalArrow[i].dataset.speed;        
     
-      //   if($(window).width() < 1024){
-      //     speed = speed / 3
-      //   }
+        if($(window).width() < 1024){
+          speed = speed / 3
+        }
     
-      //   new Vivus(generalArrow[i], {
-      //     type: 'sync',
-      //     duration: speed
-      //   });
-      // }   
+        new Vivus(generalArrow[i], {
+          type: 'sync',
+          duration: speed
+        });
+      }   
     }
     
 
@@ -499,25 +499,28 @@ $(document).ready(() => {
       return;
     }
 
-    let lines = $('.landing-page').find('.animated-svg')
+    if($(window).width() < 768){
 
-    console.log(lines);
+      let lines = $('.landing-page').find('.animated-svg')
 
-    for (var i = lines.length - 1; i >= 0; i--) {
-      let speed = lines[i].dataset.speed; 
+      for (var i = lines.length - 1; i >= 0; i--) {
+        let speed = lines[i].dataset.speed;      
+    
+        if($(window).width() < 1024){
+          speed = speed / 3
+        }
+    
+        new Vivus(lines[i], {
+          type: 'sync',
+          duration: speed,
+          start: "autostart"
+        });
+      }  
+    }
 
-     
-  
-      if($(window).width() < 1024){
-        speed = speed / 3
-      }
-  
-      new Vivus(lines[i], {
-        type: 'sync',
-        duration: speed,
-        start: "autostart"
-      });
-    }   
+
+
+ 
   
     disableScrolling()
     right.on('click', function(){
