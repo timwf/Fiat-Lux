@@ -1,32 +1,24 @@
-<link rel="stylesheet" href="{{ 'section-footer.css' | asset_url }}" media="print" onload="this.media='all'">
 
+{{ 'section-footer.css' | asset_url | stylesheet_tag }}
 
 
 <div class="footer" >
   <div class="footer__top container">
-
-
     <div class="footer__top-left">
       <h3>ABOUT US</h3>
       <p class="body-two">Lorem ipsum dolor sit amet mollit anim elit, consectetur adipiscing excepteur id sint. Nunc euismod ipsum vitae dolor pharetra. Nam sed eros non nibh vulputate blandit integer vitae.</p>
       {% render 'horizontal-line', class: "footer__top-divider-one-h" %}
       {% render 'horizontal-line', class: "footer__top-divider-two-h" %}
       {% render 'horizontal-line', class: "footer__top-divider-three-h" %}
-
       {% render 'vertical-line', class: "footer__top-divider-one-v" %}
       {% render 'vertical-line', class: "footer__top-divider-two-v" %}
-      {% render 'vertical-line', class: "footer__top-divider-three-v" %}
-    
+      {% render 'vertical-line', class: "footer__top-divider-three-v" %}    
     </div>
-
-
-
     <div class="footer__top-right">
       {% render 'horizontal-line', class: "footer__bottom-divider-one-h" %}
       <h4>NEWSLETTER</h4>
       <input type="text" placeholder="Your email">
       {% render 'button', text: "SIGN UP" %}
-
       <div class="footer__top-right-links-wrap">
           <div class="footer__top-right-links">
             <ul>  
@@ -48,14 +40,11 @@
           </div>
       </div>
     </div>
-
   </div>
   <div class="footer__bottom" style="background-image: url({{section.settings.image.src | img_url: 'master'}})">
     <div class="footer__bottom-left" style="background-image: url({{section.settings.image.src | img_url: 'master'}})">
-
     </div>
     <div class="footer__bottom-right" style="background-image: url({{section.settings.image.src | img_url: 'master'}})">
-      
     </div>
   </div>
 </div>

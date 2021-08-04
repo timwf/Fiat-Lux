@@ -10,6 +10,11 @@
   border-width: 0.5px;
 }
 
+body.dark .header{
+  border-bottom: solid #ffffff8c;
+  border-width: 0.5px;
+}
+
 .js-switch-theme{
   display: flex;
 }

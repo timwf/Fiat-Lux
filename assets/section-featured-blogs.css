@@ -1,39 +1,48 @@
 
 
-  .featured-blogs__item img{
-    width: 100%;
-    height: 59.5vw;
-    object-fit: cover;
-  }
+.featured-blogs__item img{
+  width: 100%;
+  height: 59.5vw;
+  object-fit: cover;
+}
 
-  .featured-blogs .skull{
-    right: -1px;
-    top: -9px;
-  }
+.featured-blogs .skull{
+  right: -1px;
+  top: -9px;
+}
 
-  .featured-blogs .skull svg{
-    height: 56px;
-  }
+.featured-blogs .skull svg{
+  height: 56px;
+}
 
-  .featured-blogs__swiper-pagination{
-    display: flex;
-    justify-content: center;
-  }
+.featured-blogs__swiper-pagination{
+  display: flex;
+  justify-content: center;
+}
 
-  .featured-blogs__item-text h3{
-    margin-top: 22px;
-  }
+.featured-blogs__item-text h3{
+  margin-top: 22px;
+}
 
-  .featured-blogs__item-text p{
-    margin-top: 19px;
-    margin-bottom: 19px;
-  }
+.featured-blogs__item-text p{
+  margin-top: 19px;
+  margin-bottom: 19px;
+}
 
-  .featured-blogs__item-text .button{
+.featured-blogs__item-text .button{
+  margin-bottom: 34px;
+}
 
-    margin-bottom: 34px;
-  }
 
+body.dark .featured-blogs__swiper-pagination .swiper-pagination-bullet{
+  background-color: black;
+  border: solid white;
+  border-width: 1px;
+}
+
+body.dark .featured-blogs__swiper-pagination .swiper-pagination-bullet-active{
+  background-color: white;
+}
 
 
 @media (min-width: 1026px){
@@ -82,7 +91,6 @@
   .featured-blogs__item:hover {
     cursor: pointer;
   }
-
 }
 
 

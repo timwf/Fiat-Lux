@@ -64,6 +64,10 @@
   z-index: 9;
 }
 
+.footer__bottom-divider-one-h{
+  display: none;
+}
+
 
 .footer__top-divider-two-h{
   bottom: -12px;
@@ -90,7 +94,7 @@
 
 .footer__top-right .button{
   position: absolute;
-  top: 99px;
+  top: 103px;
   right: 0;
 }
 
@@ -186,6 +190,10 @@
     padding-right: 20px;
   }
 
+  .footer__bottom-divider-one-h{
+    display: block;
+  }
+
   .footer__top-divider-one-v{
     right: 0;
     left: auto;
@@ -269,7 +277,7 @@
     width: 58%;
     height: 100%;
     background-repeat: no-repeat;
-    background-size: contain;
+    background-size: cover;
   }
 
 }

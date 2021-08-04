@@ -29,15 +29,20 @@
 
 .our-story__left h3{
   position: relative;  
-  color: var(--gold);
+  color: var(--light-blue);
   max-width: 290px;
   margin-bottom: 39px;
 }
 
+body.dark .our-story__left h3{
+  color: var(--gold);
+}
+
+
+
 @media (min-width: 1024px){
   .our-story__left h3{
-    position: relative;  
-    color: var(--gold);
+    position: relative; 
     max-width: none;
     width: 70%;
     margin-bottom: 85px;
@@ -108,4 +113,12 @@
 
 .our-story__right p{
   margin-bottom: 25px;
+}
+
+.our-story__right p strong{
+  color: var(--light-blue);
+}
+
+body.dark .our-story__right p strong{
+  color: var(--gold);
 }

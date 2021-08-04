@@ -1,12 +1,7 @@
-<link rel="stylesheet" href="{{ 'carousel.css' | asset_url }}" media="print" onload="this.media='all'">
-<noscript>{{ 'carousel.css' | asset_url | stylesheet_tag }}</noscript>
-{{ 'carousel' | asset_url | stylesheet_tag }}
+{{ 'carousel.css' | asset_url | stylesheet_tag }}
 
 <section  class="carousel">  
   <div class="carousel__inner swiper-wrapper">
-
-
-
     {% for block in section.blocks %}
        <div class="carousel__slide swiper-slide 
        {% if block.settings.pinkies-feat %} pinkies-featured{% endif %}
@@ -17,7 +12,6 @@
           <div class="carousel__slide-left-long-bar">
             {% render 'vertical-line', class: "carousel__slide-left-longbar-v-left"%} 
             {% render 'vertical-line', class: "carousel__slide-left-longbar-v-right"%}
-
             <div class="carousel__slide-left-long-bar-top">
               {% render 'vertical-line', class: "carousel__slide-left-longbar-top-v-one"%}
               {% render 'vertical-line', class: "carousel__slide-left-longbar-top-v-two"%}
@@ -28,7 +22,6 @@
               {% render 'icon-slider-left' %}
               {% render 'icon-slider-right' %}
             </div>
-
           </div>
           {% render 'vertical-line', class: "carousel__slide-left-v-left"%} 
           {% render 'vertical-line', class: "carousel__slide-left-v-right"%}
@@ -39,16 +32,12 @@
               <img  src="{{ block.settings.image | img_url: 'master'}}" alt="">
             </div>
             <div class="carousel__slide-left-bottom">
-
-
               <div class="carousel__slide-left-bottom__inner">
                 {% render 'vertical-line', class: "carousel__slide-left-bottom__inner-v-right"%}
                 {% render 'vertical-line', class: "carousel__slide-left-bottom__inner-v-left"%}
                 {% render 'horizontal-line', class: "carousel__slide-left-bottom__inner-v-top"%}
                 {% render 'horizontal-line', class: "carousel__slide-left-bottom__inner-v-bottom"%}     
               </div>
-
-
               {% render 'horizontal-line', class: "carousel__slide-left-h-bottom"%} 
             </div>   
          </div>
@@ -71,8 +60,6 @@
                 <div class="carousel__swiper-pagination"></div>
                 {% render 'button', bntLink: block.settings.button_link, text: block.settings.btn  %} 
               </div>
-
-
               {% render 'vertical-line', class: "carousel__slide-right-inner-v-left"%} 
               {% render 'vertical-line', class: "carousel__slide-right-inner-v-right"%}
               {% render 'horizontal-line', class: "carousel__slide-right-inner-h-top"%}  

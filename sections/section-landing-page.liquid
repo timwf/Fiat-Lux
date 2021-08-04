@@ -1,18 +1,4 @@
-
-
-
-<noscript>{{ 'section-landing-page.css' | asset_url | stylesheet_tag }}</noscript>
-
-
 {{ 'section-landing-page.css' | asset_url | stylesheet_tag }}
-
-<script src="{{ 'section-landing-page.js' | asset_url }}" defer="defer"></script>
-
-
-
-
-
-
 
 <section class="landing-page">
   <div class="landing-page__logo">
@@ -26,28 +12,21 @@
     <div class="landing-page__top">
       <h1>PICK YOUR POISON</h1>      
     </div>
-
     <div class="landing-page__wrap">
-
-
       <div class="landing-page__left">
         <h2>PUNK ROCK</h2>
         {% render 'big-snake' %} 
         {% render 'vertical-line', class: "landing-page__middle-one" %} 
         {% render 'vertical-line', class: "landing-page__middle-two" %} 
         {% render 'vertical-line', class: "landing-page__middle-three" %} 
-
         {% render 'horizontal-line', class: "landing-page__middle-mob-one" %}
         {% render 'horizontal-line', class: "landing-page__middle-mob-two"%}
         {% render 'horizontal-line', class: "landing-page__middle-mob-three"%}
-        <p class="landing-page__store-name">MISSION</p>
-        
-      </div>
-  
+        <p class="landing-page__store-name">MISSION</p>        
+      </div>  
       <div class="landing-page__right">
         <h2>PINKIES UP</h2>
         {% render 'big-moon' %} 
-
          <p class="landing-page__store-name">FILLMORE</p>
       </div>
     </div>  

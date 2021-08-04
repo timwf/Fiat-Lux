@@ -7,6 +7,18 @@
   }
 }
 
+.carousel__slide-h-bottom, .carousel__slide-right-v-right, .carousel__slide-right-v-left{
+  display: none;
+}
+
+@media (min-width: 1024px){
+  .carousel__slide-h-bottom, .carousel__slide-right-v-right, .carousel__slide-right-v-left{
+    display: block;
+  }
+  
+
+}
+
 .carousel .swiper-wrapper{
   box-sizing:border-box;
 }
@@ -149,7 +161,7 @@
 
 @media (min-width: 1180px){
   .carousel__slide-left-long-bar .slider-left, .carousel__slide-left-long-bar .slider-right{
-    bottom: 33%;
+    bottom: 63%;
   }
 }
 
@@ -316,10 +328,25 @@
 
 .carousel__slide-right-inner-bottom h1{
   font-family:"kumlien-pro";
-  font-size: 42px;
+  font-size: 38px;
   text-align: center;
   line-height: 42px;
   text-transform: uppercase;
+  color: var(--light-blue);
+}
+
+body.dark .carousel__slide-right-inner-bottom h1{
+
+  color: white;
+}
+
+
+
+@media (min-width: 390px){
+  .carousel__slide-right-inner-bottom h1{
+    font-size: 42px;
+
+  }
 }
 
 @media (min-width: 1024px){
@@ -363,7 +390,7 @@
   height: 8px;
   width: 8px;
   border-radius: 0;
-  border: solid #E3BD5B;
+  border: solid var(--light-blue);
   border-width: 1px;
   margin: 0px 6px;  
   opacity: 1;
@@ -371,6 +398,23 @@
 }
 
 .swiper-pagination-bullet-active{
+  background-color: var(--light-blue);
+}
+
+
+
+body.dark .swiper-pagination-bullet{
+  height: 8px;
+  width: 8px;
+  border-radius: 0;
+  border: solid #E3BD5B;
+  border-width: 1px;
+  margin: 0px 6px;  
+  opacity: 1;
+  background-color: black;
+}
+
+body.dark .swiper-pagination-bullet-active{
   background-color: #E3BD5B;
 }
 
