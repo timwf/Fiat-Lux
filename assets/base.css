@@ -5,13 +5,26 @@
   --gold: #E3BD5B
 }
 
+
+
 .vertical-line path{
-  stroke-width: 1px !important;
+  stroke-width: 2.5px !important;
 }
 
-.vhorizontal-line path{
-  stroke-width: 1px !important;
+body.dark .vertical-line path{
+  stroke-width: 1.5px !important;
 }
+
+body.dark .horizontal-line path{
+  stroke-width: 1.5px !important;
+}
+
+.horizontal-line path{
+  stroke-width: 2.5px !important;
+}
+
+
+
 
 /* ::-webkit-scrollbar {
   width: 10px;
