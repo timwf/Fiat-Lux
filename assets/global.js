@@ -470,6 +470,8 @@ $(document).ready(() => {
     
       for (var i = generalArrow.length - 1; i >= 0; i--) {
         let speed = generalArrow[i].dataset.speed; 
+
+       
     
         if($(window).width() < 1024){
           speed = speed / 3
@@ -498,6 +500,26 @@ $(document).ready(() => {
     if(!$(left).length){
       return;
     }
+
+    let lines = $('.landing-page').find('.animated-svg')
+
+    console.log(lines);
+
+    for (var i = lines.length - 1; i >= 0; i--) {
+      let speed = lines[i].dataset.speed; 
+
+     
+  
+      if($(window).width() < 1024){
+        speed = speed / 3
+      }
+  
+      new Vivus(lines[i], {
+        type: 'sync',
+        duration: speed,
+        forceRender: true
+      });
+    }   
   
     disableScrolling()
     right.on('click', function(){
