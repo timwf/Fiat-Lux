@@ -1,7 +1,13 @@
 {
   "sections": {
     "main": {
-      "type": "main-list-collections"
+      "type": "main-list-collections",
+      "settings": {
+        "title": "Shop",
+        "copy": "Some text here",
+        "image": "shopify:\/\/shop_images\/shop.png",
+        "image_padding": false
+      }
     }
   },
   "order": [
