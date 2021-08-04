@@ -69,16 +69,35 @@
 
 }
 
-.featured-article__left--collection{
-  height: 20vw;
-}
 
 .featured-article__left--collection img:hover{
   cursor: default;
 }
 
+.featured-article__left--collection{
+  height: auto;
+}
+
+
+
 
 .featured-article__left--collection img{
-
+  height: 20vh;
+  width: 100%;
   object-fit: cover;
+}
+
+@media (min-width: 1180px){ 
+
+  .featured-article__left--collection{
+ 
+   height: 69vh !important;
+  }
+
+  .featured-article__left--collection img{
+    height: 69vh;
+
+  }
+
+  
 }

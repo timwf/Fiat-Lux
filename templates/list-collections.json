@@ -8,17 +8,9 @@
         "image": "shopify:\/\/shop_images\/shop.png",
         "image_padding": false
       }
-    },
-    "162806046242598894": {
-      "type": "ticker",
-      "settings": {
-        "text": "Some copy here",
-        "padding": true
-      }
     }
   },
   "order": [
-    "main",
-    "162806046242598894"
+    "main"
   ]
 }

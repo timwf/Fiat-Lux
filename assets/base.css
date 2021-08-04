@@ -5,6 +5,34 @@
   --gold: #E3BD5B
 }
 
+/* ::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: var(--gold);
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: black;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--light-blue);
+}
+
+::-webkit-scrollbar-thumb:hover ::-webkit-scrollbar{
+  width: 20px;
+} */
+
+
+body.dark ::-webkit-scrollbar-thumb {
+  background: var(--gold);
+}
+
 html {
   box-sizing: border-box;
   -webkit-overflow-scrolling: touch;

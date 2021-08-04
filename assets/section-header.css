@@ -15,6 +15,15 @@ body.dark .header{
   border-width: 0.5px;
 }
 
+@media (min-width: 1272px){
+  body.dark .header{
+    border-bottom: none;
+    border-width: 0.5px;
+  }
+}
+
+
+
 .js-switch-theme{
   display: flex;
 }
