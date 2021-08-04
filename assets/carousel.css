@@ -238,8 +238,9 @@
 
 .carousel__slide-left img{
   position: absolute;
-  width: calc(100% - 0px);
+  width: calc(100% - 1px);
   height: 100%;
+  margin-left: 1px;
   object-fit: cover;
   transition: 3.5s;
 }
