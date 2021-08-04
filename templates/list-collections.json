@@ -8,9 +8,17 @@
         "image": "shopify:\/\/shop_images\/shop.png",
         "image_padding": false
       }
+    },
+    "16280619366c9d48f2": {
+      "type": "ticker",
+      "settings": {
+        "text": "FREE SHIPPING ON ORDERS $150+",
+        "padding": true
+      }
     }
   },
   "order": [
-    "main"
+    "main",
+    "16280619366c9d48f2"
   ]
 }
