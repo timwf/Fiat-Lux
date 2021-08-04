@@ -88,10 +88,10 @@
       "type": "store-select",
       "settings": {
         "m-heading": "Mission",
-        "m-copy": "Some copy here",
+        "m-copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.",
         "m-image": "shopify:\/\/shop_images\/imageg.png",
         "f-heading": "Fiilmore",
-        "f-copy": "Some copy here",
+        "f-copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor ut labore et dolore magna aliqua.",
         "f-image": "shopify:\/\/shop_images\/image.png"
       }
     },
