@@ -17,7 +17,7 @@
   </div>
 </section>
 
-{% assign collections = collections['all'] %}
+{% assign collection = collections['all'] %}
 
 <div class="collection-product-grid container">
   <div class="collection-product-grid__filters">
@@ -57,7 +57,7 @@
 
 
   <div class="collection-product-grid__grid">
-    {% for product in collections.products %}
+    {% for product in collection.products %}
     {% render 'component-product-card', product: product %}
   {% endfor %}
   </div>
