@@ -4,7 +4,7 @@
       "type": "main-list-collections",
       "settings": {
         "title": "Shop",
-        "copy": "Some text here",
+        "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
         "image": "shopify:\/\/shop_images\/shop.png",
         "image_padding": false
       }
