@@ -55,7 +55,7 @@
 }
 
 .carousel__slide-h-top{
-  top: 0;
+  top: -1px;
 }
 
 .carousel__slide-left{
@@ -117,10 +117,13 @@
 
 .carousel__slide-left-longbar-v-left{
   z-index: 9;
+  top: 1px;
 }
 
 .carousel__slide-left-longbar-v-right{
-  right: 0px;
+  right: -1px;
+  height: calc(100% + 1px);
+  top: 1px;
   left: auto;
   z-index: 9;
 }
@@ -131,15 +134,18 @@
 
 .carousel__slide-left-longbar-top-v-one{
   left: 30px;
+  top: 1px;
 }
 
 .carousel__slide-left-longbar-top-v-two{
   left: 50px;
+  top: 1px;
 }
 
 
 .carousel__slide-left-longbar-top-v-three{
   left: 70px;
+  top: 1px;
 }
 
 
@@ -196,11 +202,11 @@
 }
 
 .carousel__slide-left-bottom__inner-v-top{
-  top: 0;
+  top: -1px;
 }
 
 .carousel__slide-left-bottom__inner-v-right{
-  right: 0;
+  right: -1px;
   left:auto;
 }
 
@@ -212,7 +218,7 @@
 }
 
 .carousel__slide-left-v-right{
-  right: 29px;
+  right: 28px;
   left: auto;
 }
 
@@ -232,7 +238,7 @@
 
 .carousel__slide-left img{
   position: absolute;
-  width: calc(100% - 1px);
+  width: calc(100% - 0px);
   height: 100%;
   object-fit: cover;
   transition: 3.5s;
@@ -262,14 +268,15 @@
 
 .carousel__slide-right-h-top{
   top: 0;
+  width: calc(100% - 1px);
 }
 
 .carousel__slide-right-inner-h-top{
-  top: 0;
+  top: -1px;
 }
 
 .carousel__slide-right-inner-v-right{
-  right: 0px;
+  right: -1px;
   left: auto;
 
 }

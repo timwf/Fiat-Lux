@@ -5,6 +5,14 @@
   --gold: #E3BD5B
 }
 
+.vertical-line path{
+  stroke-width: 1px !important;
+}
+
+.vhorizontal-line path{
+  stroke-width: 1px !important;
+}
+
 /* ::-webkit-scrollbar {
   width: 10px;
 }
