@@ -11,7 +11,7 @@ html {
 }
 
 .page-wrap{
-  margin-top: 68px;
+  padding-top: 68px;
   overflow-x: hidden;
   overflow-y: hidden;
   z-index: 20;
@@ -22,7 +22,7 @@ html {
 
 @media (min-width: 1024px){
   .page-wrap{
-    margin-top: 53px;
+    padding-top: 53px;
   }
 }
 

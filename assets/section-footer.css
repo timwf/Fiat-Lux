@@ -3,6 +3,16 @@
 
 }
 
+#shopify-section-footer{
+  position: relative;
+}
+
+.footer__top-divider-h{
+  top: 0;
+  bottom: auto;
+  z-index: 999;
+}
+
 .footer__top{
   margin-top: 0px;
   position: relative;

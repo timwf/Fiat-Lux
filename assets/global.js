@@ -496,11 +496,12 @@ $(document).ready(() => {
     const right = $('.landing-page__right')
 
     if(!$(left).length){
+      $('.header').addClass('active')
+      console.log('no lanfing');
       return;
     }
 
     if($(window).width() < 768){
-
       let lines = $('.landing-page').find('.animated-svg')
 
       for (var i = lines.length - 1; i >= 0; i--) {
@@ -518,16 +519,38 @@ $(document).ready(() => {
       }  
     }
 
+    setTimeout(function(){ 
+
+      if($('.landing-page').hasClass('remove')){
+        console.log('return!!!');
+        return;
+      }else{
+        console.log('gsdfgsdf');
+
+        $('.landing-page__left').addClass('active')
+
+        setTimeout(function(){ 
+
+          left.click()
+        }, 500);
+
+        
+      }
 
 
+
+     }, 6000);
  
   
     disableScrolling()
+
     right.on('click', function(){
       $('.landing-page').addClass('remove')
       $('body').removeClass('dark')
       initLinesAnimations()
       $('.header').addClass('active')
+      localStorage.setItem('theme', "light");
+      console.log('2');
       setTimeout(function(){ 
   
         enableScrolling()
@@ -537,6 +560,8 @@ $(document).ready(() => {
     left.on('click', function(){
       $('.landing-page').addClass('remove')
       $('body').addClass('dark')
+      localStorage.setItem('theme', "dark");
+      console.log('3');
       $('.header').addClass('active')
   
       setTimeout(function(){ 
@@ -608,11 +633,15 @@ $(document).ready(() => {
     $('.js-switch-theme').on('click', function(){
       if($('body').hasClass('dark')){
         $('body').removeClass('dark')
+        localStorage.setItem('theme', "light");
+        console.log('4');
 
 
         $(this).find('li').text('be Punk rock')
       }else{
+        console.log('1');
         $('body').addClass('dark')
+        localStorage.setItem('theme', "dark");
         $(this).find('li').text('be Pinkies up')  
         initLinesAnimations()
       }
@@ -656,6 +685,12 @@ $(document).ready(() => {
   }
 
   function initCarousel(){
+
+    if(!$('.carousel').length){
+      return;
+    }
+
+
     const swiper = new Swiper('.carousel', {
       slidesPerView: 1,
       loop: true,
@@ -794,6 +829,148 @@ $(document).ready(() => {
       }
   }
 
+  function initCollectionFilter(){
+    let viewBtn = $('.js-view-btn')
+    let filterBtn = $('.js-filter-btn')
+    let sortBtn = $('.js-sort-btn')
+
+    let url = window.location.href
+
+    let sortFeatured = $('.js-filter-sort-by-featured')
+    let sortLatest = $('.js-filter-sort-by-latest')
+    let sortBest = $('.js-filter-sort-by-best-seller')
+    let sortLow = $('.js-filter-sort-by-low-high')
+    let sortHigh = $('.js-filter-sort-by-high-low')
+
+    console.log(url);
+
+    if(url.includes('?sort_by=price-descending')){
+      sortHigh.addClass('active')
+    }
+
+    if(url.includes('?sort_by=price-ascending')){
+      sortLow.addClass('active')
+    }
+
+    if(url.includes('?sort_by=best-selling')){
+      sortBest.addClass('active')
+    }
+
+    if(url.includes('?sort_by=latest')){
+      sortLatest.addClass('active')
+    }
+
+    if(url.includes('?sort_by=featured')){
+      sortFeatured.addClass('active')
+    }
+
+    sortHigh.on('click', function(){
+      let url = window.location.href
+      url.split('?')[0] 
+      window.location.href = url.split('?')[0] + "?sort_by=price-descending";
+    })
+
+    sortLow.on('click', function(){
+      let url = window.location.href
+      url.split('?')[0] 
+      window.location.href = url.split('?')[0] + "?sort_by=price-ascending";
+    })
+
+    sortBest.on('click', function(){
+      let url = window.location.href
+      url.split('?')[0] 
+      window.location.href = url.split('?')[0] + "?sort_by=best-selling";
+    })
+
+    sortLatest.on('click', function(){
+      let url = window.location.href
+      url.split('?')[0] 
+      window.location.href = url.split('?')[0] + "?sort_by=latest";
+    })
+
+    sortFeatured.on('click', function(){
+      let url = window.location.href
+      url.split('?')[0] 
+      window.location.href = url.split('?')[0] + "?sort_by=featured";
+    })
+
+    
+
+ 
+
+    
+
+
+    
+
+
+
+
+
+    viewBtn.on('click', function(){
+
+      if ($(this).find('.js-button').text() == "-") {
+        $(this).find('.js-button').text('+')
+        $('.collection-product-grid__filters-bottom').removeClass('active') 
+        return 
+      }  
+
+      $(this).parent().parent().find('.js-button').each(function(){
+        console.log(this);
+        $(this).text('+')
+      })
+
+      $(this).find('.js-button').text('-')
+   
+      $('.js-filter-view').css('display', 'flex')
+      $('.js-filter-collection').css('display', 'none')
+      $('.js-filter-sort-by').css('display', 'none')
+      $('.collection-product-grid__filters-bottom').addClass('active')       
+    })
+
+    filterBtn.on('click', function(){
+
+      if ($(this).find('.js-button').text() == "-") {
+        $(this).find('.js-button').text('+')
+        $('.collection-product-grid__filters-bottom').removeClass('active') 
+        return 
+      }
+
+      $(this).parent().parent().find('.js-button').each(function(){
+        console.log(this);
+        $(this).text('+')
+      })
+
+      $(this).find('.js-button').text('-')
+
+      $('.js-filter-view').css('display', 'none')
+      $('.js-filter-collection').css('display', 'flex')
+      $('.js-filter-sort-by').css('display', 'none')
+      $('.collection-product-grid__filters-bottom').addClass('active')       
+    })
+
+    sortBtn.on('click', function(){
+
+      if ($(this).find('.js-button').text() == "-") {
+        $(this).find('.js-button').text('+')
+        $('.collection-product-grid__filters-bottom').removeClass('active') 
+        return 
+      }
+
+      $(this).parent().parent().find('.js-button').each(function(){
+        console.log(this);
+        $(this).text('+')
+      })
+
+      $(this).find('.js-button').text('-')
+      
+      $('.js-filter-view').css('display', 'none')
+      $('.js-filter-collection').css('display', 'none')
+      $('.js-filter-sort-by').css('display', 'flex')
+      $('.collection-product-grid__filters-bottom').addClass('active')       
+    })
+  }
+
 
 
   initHeader()
@@ -804,6 +981,7 @@ $(document).ready(() => {
   getWindowHeight()
   initFeaturedArticles()
   initLandingPage()
+  initCollectionFilter()
   var windowWidth = $(window).width();
 
   window.addEventListener('resize', () => {

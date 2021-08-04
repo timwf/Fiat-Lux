@@ -202,12 +202,12 @@ transform: translateY(-100%);
   fill: transparent
 }
 
-.landing-page__left:hover .big-snake path{
+.landing-page__left:hover .big-snake path, .landing-page__left.active .big-snake path{
   fill: var(--gold);
   z-index: 99;
 }
 
-.landing-page__left:hover h2{
+.landing-page__left:hover h2, .landing-page__left.active h2{
   color: #725F2D;
 }
 
@@ -215,7 +215,7 @@ transform: translateY(-100%);
   color: #224775;
 }
 
-.landing-page__left:hover p{
+.landing-page__left:hover p, .landing-page__left.active p{
   opacity: 1;
 }
 

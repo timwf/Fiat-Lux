@@ -119,6 +119,10 @@
   color: white;
 }
 
+.ticker-section--padding{
+  margin-bottom: 60px;
+}
+
 @media (min-width: 768px){
   .ticker-section h2{
 

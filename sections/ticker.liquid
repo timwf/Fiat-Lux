@@ -1,6 +1,8 @@
 {{ 'section-ticker.css' | asset_url | stylesheet_tag }}
 
-<section class="ticker-section">
+<section class="ticker-section {% if section.settings.padding %}
+ticker-section--padding
+{% endif %}">
 
   {% render 'horizontal-line', class: "ticker-section-h-top" %}   
   <div id="marquee" class="ticker-section__ticker">
@@ -73,6 +75,12 @@
       "id": "text",
       "default": "Some copy here",
       "label": "Ticker Text"
+    },
+    {
+      "type": "checkbox",
+      "id": "padding",
+      "label": "Padding Bottom?",
+      "default": false
     }
   ],
   "presets": [

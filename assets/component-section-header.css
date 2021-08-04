@@ -4,10 +4,15 @@
   padding-bottom: 0px;
 }
 
+.section-header .horizontal-line{
+  z-index: 9;
+}
+
 .section-header h2{
   margin-top: 54px;
   padding-bottom: 5px;
   color: var(--light-blue);
+  text-transform: uppercase;
 }
 
 .section-header__snake-wrap{

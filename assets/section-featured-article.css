@@ -48,7 +48,18 @@
 
   .featured-article__item-text p{
     margin-top: 0px;
+    font-family:"astoria";
+    font-size: 16px;
+    line-height: 22px;
+    letter-spacing: 0.5px;
+    font-weight: 400;
+  }
 
+  @media (min-width: 768px){ 
+    .featured-article__item-text p{
+      font-size: 16px;
+      line-height: 22px;
+    }
   }
 
   
@@ -56,4 +67,18 @@
     margin-right: 32px;
   }
 
+}
+
+.featured-article__left--collection{
+  height: 20vw;
+}
+
+.featured-article__left--collection img:hover{
+  cursor: default;
+}
+
+
+.featured-article__left--collection img{
+
+  object-fit: cover;
 }

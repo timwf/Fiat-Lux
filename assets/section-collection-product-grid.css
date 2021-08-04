@@ -1,0 +1,89 @@
+
+
+
+.collection-product-grid__filters-top{
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  margin-top: 40px;
+}
+
+.collection-product-grid__filters-top p{
+  font-family:"astoria";
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  margin-bottom: 5px;
+}
+
+.collection-product-grid__filters-top-right{
+  display: flex;
+}
+
+.collection-product-grid__filters-top-right p {
+  margin-left: 42px;  
+
+}
+
+
+.collection-product-grid__filters-bottom{
+  position: relative;
+  max-height: 0px;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.collection-product-grid__filters-bottom.active{
+
+  max-height: 200px;
+
+}
+
+.collection-product-grid__filters-bottom ul{
+  display: flex;
+  text-transform: uppercase;
+}
+
+
+.collection-product-grid__filters-bottom li{
+  margin-right: 50px;
+  padding-top: 17px;
+  padding-bottom: 17px;
+  font-family:"astoria";
+  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 400;
+}
+
+.js-filter-sort-by, .js-filter-view, .js-filter-collection{
+  display: none ;
+}
+
+.js-filter-view, .js-filter-sort-by{
+  justify-content: flex-end;
+}
+
+.js-filter-view li, .js-filter-sort-by li{
+  margin-left: 50px;
+  margin-right: 0px;  
+}
+
+
+.collection-product-grid__filters p:hover, .collection-product-grid__filters-bottom li:hover, .collection-product-grid__filters-bottom li.active {
+  cursor: pointer;
+  color: var(--light-blue);
+}
+
+body.dark .collection-product-grid__filters p:hover, body.dark .collection-product-grid__filters-bottom li:hover, body.dark .collection-product-grid__filters-bottom li.active{
+  color: var(--gold);
+}
+
+
+.collection-product-grid__grid{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  margin-top: 30px;
+}
+
