@@ -515,7 +515,7 @@ $(document).ready(() => {
       new Vivus(lines[i], {
         type: 'sync',
         duration: speed,
-        forceRender: true
+        start: autostart
       });
     }   
   
