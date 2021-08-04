@@ -532,15 +532,9 @@ $(document).ready(() => {
         setTimeout(function(){ 
 
           left.click()
-        }, 500);
-
-        
+        }, 500);        
       }
-
-
-
-     }, 6000);
- 
+     }, 6000); 
   
     disableScrolling()
 

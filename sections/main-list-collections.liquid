@@ -1,4 +1,5 @@
 {{ 'section-featured-article.css' | asset_url | stylesheet_tag }}
+{{ 'section-collection-product-grid.css' | asset_url | stylesheet_tag }}
 
 <section  class="featured-article container">
   {% render 'component-section-header' title: "Shop"%}
@@ -15,6 +16,54 @@
     </div>
   </div>
 </section>
+
+{% assign collections = collections['all'] %}
+
+<div class="collection-product-grid container">
+  <div class="collection-product-grid__filters">
+    <div class="collection-product-grid__filters-top">
+      <div class="collection-product-grid__filters-top-left">
+        <p class="js-filter-btn">FILTER <span class="js-button">+</span></p> 
+      </div>
+      <div class="collection-product-grid__filters-top-right ">
+        <p class="js-view-btn">VIEW <span class="js-button">+</span></p> 
+        <p class="js-sort-btn">SORT BY <span class="js-button">+</span> </p> 
+      </div>
+      {% render 'horizontal-line' %}
+    </div>
+    <div class="collection-product-grid__filters-bottom ">
+      <ul class="js-filter-collection">
+        {% for item in collections %}
+        <a href="{{item.url}}"><li {% if item.title == collection.title %}class="active"{% endif %}>{{item.title}}</li></a>
+        {% endfor %}
+      </ul>
+      <ul class="js-filter-view">    
+          <li>15</li>       
+          <li>30</li>   
+          <li>45</li>  
+      </ul>
+
+      <ul class="js-filter-sort-by">    
+        <li class="js-filter-sort-by-featured">FEATURED</li>       
+        <li class="js-filter-sort-by-latest">LATEST</li>   
+        <li class="js-filter-sort-by-best-seller">BEST SELLER</li>  
+        <li class="js-filter-sort-by-low-high">PRICE: LOW TO HIGH</li>  
+        <li class="js-filter-sort-by-high-low">PRICE: HIGH TO LOW</li>  
+      </ul>
+      {% render 'horizontal-line' %}
+    </div>
+  </div>
+
+
+
+  <div class="collection-product-grid__grid">
+    {% for product in collections.products %}
+    {% render 'component-product-card', product: product %}
+  {% endfor %}
+  </div>
+</div>
+
+
 
 
 {% schema %}
