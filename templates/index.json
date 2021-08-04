@@ -27,8 +27,8 @@
             "image": "shopify:\/\/shop_images\/image.png",
             "pinkies-feat": true,
             "pinkies-punk": false,
-            "heading": "Some Heading here",
-            "copy": "Some Copy Here",
+            "heading": "Header  lorem ipsum tree tun",
+            "copy": "nec dapibus risus ultricies",
             "btn": "Button",
             "button_link": ""
           }
@@ -39,8 +39,8 @@
             "image": "shopify:\/\/shop_images\/imageg.png",
             "pinkies-feat": false,
             "pinkies-punk": true,
-            "heading": "Some Heading here",
-            "copy": "Some Copy Here",
+            "heading": "Nunc vestibulum interdum",
+            "copy": "vel blandit lectus. Integer pretium molestie dia",
             "btn": "Button",
             "button_link": ""
           }
