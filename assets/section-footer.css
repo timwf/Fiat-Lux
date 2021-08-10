@@ -106,6 +106,7 @@
   position: absolute;
   top: 103px;
   right: 0;
+  background-color: white;
 }
 
 .footer__top-right-links-wrap{
@@ -151,7 +152,7 @@
 }
 
 .footer__top-right-social-links svg{
-  margin-right: 16px;
+  margin-right: 13px;
   margin-top: 12px;
 }
 
@@ -290,5 +291,15 @@
     background-size: cover;
   }
 
+  .footer__top-right-social-links svg{
+    margin-right: 16px;
+    margin-top: 12px;
+  }
+
+}
+
+
+body.dark .footer__top-right .button{
+  background-color: black;
 }
 

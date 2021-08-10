@@ -34,7 +34,7 @@
 
 .collection-product-grid__filters-bottom.active{
 
-  max-height: 200px;
+  max-height: 2000px;
 
 }
 
@@ -79,7 +79,7 @@ body.dark .collection-product-grid__filters p:hover, body.dark .collection-produ
   margin-top: 30px;
 }
 
-@media (min-width: 768px){ 
+@media (min-width: 1024px){ 
   .collection-product-grid__grid{
     grid-template-columns: 1fr 1fr 1fr;
   }
@@ -99,6 +99,3 @@ body.dark .collection-product-grid__filters p:hover, body.dark .collection-produ
   }
   
 }
-
-
-

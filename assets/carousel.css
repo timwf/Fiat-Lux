@@ -162,7 +162,7 @@
   position: absolute;
   bottom: 30%;
   left: 30px;
-  height: 23px;
+  height: 21.5px;
 }
 
 @media (min-width: 1180px){
@@ -359,8 +359,15 @@ body.dark .carousel__slide-right-inner-bottom h1{
 
 @media (min-width: 1024px){
   .carousel__slide-right-inner-bottom h1{
-    font-size: 43px;
+    font-size: 36px;
     line-height: 53px;
+  }
+}
+
+@media (min-width: 1200px){
+  .carousel__slide-right-inner-bottom h1{
+    font-size: 43px;
+
   }
 }
 

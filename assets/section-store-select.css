@@ -194,6 +194,8 @@ body.dark .store-select__body-item-wrap-mobile__inner h3{
 .store-select__body-item-wrap-mobile__inner p{
   margin-top: 10px;
   margin-bottom: 21px;
+  max-width: 219px;
+  text-align: center;
 
 }
 

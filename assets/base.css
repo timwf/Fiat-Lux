@@ -23,6 +23,13 @@ body.dark .horizontal-line path{
   stroke-width: 2.5px !important;
 }
 
+input:focus,
+select:focus,
+textarea:focus,
+button:focus {
+    outline: none;
+}
+
 
 
 
@@ -107,7 +114,7 @@ time, mark, audio, video {
 
 
 body{
-  color: black;
+  color: #161616;
   box-sizing: border-box;
   overflow-x: hidden;
 }
@@ -119,6 +126,7 @@ li, ul{
 input::placeholder {
   color: black;
   background-color: white;
+  font-size: 14px;
   transition: 0.4s;
 }
 
@@ -194,7 +202,7 @@ input{
   margin-right: 4px !important;
   text-transform: uppercase;
   font-family:"astoria";
-  font-size: 14px;  
+  font-size: 14px !important;  
   transition: 0.4s;
 }
 

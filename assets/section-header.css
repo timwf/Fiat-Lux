@@ -4,7 +4,7 @@
   position: relative;
   position: fixed;
   top: -63px;
-  z-index: 999;
+  z-index: 1000;
   transition: 0.4s;
   border-bottom: solid var(--light-blue);
   border-width: 0.5px;
@@ -175,11 +175,15 @@ body.dark .header{
 
 
 .header__main-menu-item-active a{
-  color: var(--light-blue)
+  color: var(--light-blue) !important
 }
 
 .header__col-four svg, .header__mobile-icons svg{
   margin: 0px 10px;
+}
+
+body.dark .header__main-menu-item-active a{
+  color: var(--gold) !important
 }
 
 

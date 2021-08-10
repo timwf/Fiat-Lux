@@ -9,7 +9,7 @@
         <svg width="17" height="18" viewBox="0 0 17 18" fill="none" xmlns="http://www.w3.org/2000/svg">
           <rect y="-1.41162" width="9.76404" height="9.76404" transform="matrix(0.708401 0.70581 -0.708401 0.70581 7.50001 3.08374)" stroke="#458EEA" stroke-width="2"/>
         </svg>
-        <li>BE PUNK ROCK</li> 
+        <li style="font-family: 'kumlien-pro'; font-weight: 700;">BE PUNK ROCK</li> 
       </div> 
     </div>
     <div class="header__col header__col-two">
@@ -26,7 +26,7 @@
               <ul>
                 {%- for childlink in link.links -%}
                   {%- if childlink.url != blank -%}
-                  <li>
+                  <li class="{% if childlink.active %}header__main-menu-item-active{% endif %}">
                     <a href="{{ childlink.url }}" >
                       {{ childlink.title | escape }}
                     </a>

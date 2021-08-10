@@ -23,7 +23,7 @@ transform: translateY(-100%);
   z-index: 9;
 }
 
-@media (min-width: 380px){
+@media (min-width: 416px){
   .landing-page h2{
     font-size: 80px; 
   }
@@ -31,10 +31,19 @@ transform: translateY(-100%);
 
 @media (min-width: 1024px){
   .landing-page h2{
-    font-size: 130px; 
+    font-size: 112px; 
     max-width: 500px;
     line-height: 130px;
     /* margin-top: calc( var(--vh, 1vh) / 100 - 195px); */
+  }
+}
+
+@media (min-width: 1240px){
+  .landing-page h2{
+    font-size: 130px; 
+    max-width: 500px;
+    line-height: 130px;
+    margin-top: calc( var(--vh, 1vh) / 100 - 136px);
   }
 }
 
