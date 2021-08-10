@@ -6,13 +6,6 @@
         "heading": "You may also like"
       }
     },
-    "1628584804431754d7": {
-      "type": "ticker",
-      "settings": {
-        "text": "Some copy here",
-        "padding": false
-      }
-    },
     "16277125943c53e494": {
       "type": "carousel",
       "blocks": {
@@ -59,6 +52,13 @@
         "82fed98c-fa8b-40f2-87cf-20cb4fcba5af"
       ],
       "settings": {
+      }
+    },
+    "1628584804431754d7": {
+      "type": "ticker",
+      "settings": {
+        "text": "Some copy here",
+        "padding": false
       }
     },
     "1626252590bd81a566": {
@@ -180,8 +180,8 @@
   },
   "order": [
     "16276096099fac78c1",
-    "1628584804431754d7",
     "16277125943c53e494",
+    "1628584804431754d7",
     "1626252590bd81a566",
     "162760971559972227",
     "1627609753806c7214",
