@@ -29,6 +29,12 @@ textarea:focus,
 button:focus {
     outline: none;
 }
+  
+  
+  
+  .recommendation-modal__content{
+    background-color: yellow;
+  }
 
 
 
